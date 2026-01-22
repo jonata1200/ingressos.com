@@ -84,6 +84,82 @@
         </div>
     </footer>
 
+    <script src="js/eventos.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/renderizacao.js"></script>
     <script src="js/navegacao.js"></script>
+    <script>
+        // Carregar detalhes do evento
+        function carregarDetalhesEvento() {
+            const eventoId = localStorage.getItem('eventoSelecionado');
+            
+            if (!eventoId) {
+                document.getElementById('detalhes-content').innerHTML = `
+                    <div class="detalhes-loading">
+                        <p>Evento não encontrado. <a href="eventos.html">Voltar para eventos</a></p>
+                    </div>
+                `;
+                return;
+            }
+            
+            const evento = obterEventoPorId(eventoId);
+            
+            if (!evento) {
+                document.getElementById('detalhes-content').innerHTML = `
+                    <div class="detalhes-loading">
+                        <p>Evento não encontrado. <a href="eventos.html">Voltar para eventos</a></p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Salvar no histórico
+            if (typeof salvarEventoVisualizado === 'function') {
+                salvarEventoVisualizado(parseInt(eventoId));
+            }
+            
+            // Renderizar detalhes
+            if (typeof renderizarDetalhesEvento === 'function') {
+                renderizarDetalhesEvento(evento);
+            }
+        }
+        
+        // Função para adicionar ao carrinho (preparação para FASE 4)
+        function adicionarAoCarrinho(eventoId) {
+            const quantidade = parseInt(document.getElementById('quantidade-ingressos').value) || 1;
+            const evento = obterEventoPorId(eventoId);
+            
+            if (!evento) {
+                alert('Evento não encontrado!');
+                return;
+            }
+            
+            if (evento.ingressosDisponiveis < quantidade) {
+                alert(`Apenas ${evento.ingressosDisponiveis} ingressos disponíveis!`);
+                return;
+            }
+            
+            // Preparar dados para carrinho (será implementado na FASE 4)
+            const itemCarrinho = {
+                eventoId: evento.id,
+                nome: evento.nome,
+                data: evento.data,
+                local: evento.local,
+                precoUnitario: evento.preco,
+                quantidade: quantidade,
+                subtotal: evento.preco * quantidade,
+                imagem: evento.imagem
+            };
+            
+            // Por enquanto, apenas redirecionar para carrinho
+            // Na FASE 4, isso será implementado corretamente
+            alert(`Adicionado ao carrinho: ${quantidade} ingresso(s) de ${evento.nome}`);
+            // window.location.href = 'carrinho.html';
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            carregarDetalhesEvento();
+        });
+    </script>
 </body>
 </html>

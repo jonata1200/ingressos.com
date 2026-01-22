@@ -48,58 +48,6 @@
             <h2 class="section-title">Eventos em Destaque</h2>
             <div class="eventos-grid" id="eventos-container">
                 <!-- Cards de eventos serão inseridos aqui dinamicamente -->
-                <!-- Placeholder cards para visualização -->
-                <div class="evento-card">
-                    <div class="evento-imagem">
-                        <img src="https://via.placeholder.com/400x250/6366f1/ffffff?text=Show+de+Rock" alt="Show de Rock">
-                    </div>
-                    <div class="evento-info">
-                        <h3 class="evento-titulo">Show de Rock Nacional</h3>
-                        <p class="evento-data">📅 15 de Dezembro de 2024</p>
-                        <p class="evento-local">📍 Teatro Municipal - São Paulo</p>
-                        <p class="evento-preco">R$ 120,00</p>
-                        <a href="detalhes.html" class="btn btn-secondary">Ver Detalhes</a>
-                    </div>
-                </div>
-
-                <div class="evento-card">
-                    <div class="evento-imagem">
-                        <img src="https://via.placeholder.com/400x250/8b5cf6/ffffff?text=Peça+de+Teatro" alt="Peça de Teatro">
-                    </div>
-                    <div class="evento-info">
-                        <h3 class="evento-titulo">Hamlet - Clássico do Teatro</h3>
-                        <p class="evento-data">📅 20 de Dezembro de 2024</p>
-                        <p class="evento-local">📍 Teatro Nacional - Rio de Janeiro</p>
-                        <p class="evento-preco">R$ 80,00</p>
-                        <a href="detalhes.html" class="btn btn-secondary">Ver Detalhes</a>
-                    </div>
-                </div>
-
-                <div class="evento-card">
-                    <div class="evento-imagem">
-                        <img src="https://via.placeholder.com/400x250/ec4899/ffffff?text=Jogo+de+Futebol" alt="Jogo de Futebol">
-                    </div>
-                    <div class="evento-info">
-                        <h3 class="evento-titulo">Campeonato Brasileiro</h3>
-                        <p class="evento-data">📅 22 de Dezembro de 2024</p>
-                        <p class="evento-local">📍 Estádio do Maracanã - Rio de Janeiro</p>
-                        <p class="evento-preco">R$ 150,00</p>
-                        <a href="detalhes.html" class="btn btn-secondary">Ver Detalhes</a>
-                    </div>
-                </div>
-
-                <div class="evento-card">
-                    <div class="evento-imagem">
-                        <img src="https://via.placeholder.com/400x250/10b981/ffffff?text=Festival+de+Música" alt="Festival de Música">
-                    </div>
-                    <div class="evento-info">
-                        <h3 class="evento-titulo">Festival de Verão 2024</h3>
-                        <p class="evento-data">📅 30 de Dezembro de 2024</p>
-                        <p class="evento-local">📍 Praia de Copacabana - Rio de Janeiro</p>
-                        <p class="evento-preco">R$ 200,00</p>
-                        <a href="detalhes.html" class="btn btn-secondary">Ver Detalhes</a>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -132,6 +80,20 @@
         </div>
     </footer>
 
+    <script src="js/eventos.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/renderizacao.js"></script>
     <script src="js/navegacao.js"></script>
+    <script>
+        // Carregar eventos em destaque
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof window.eventos !== 'undefined' && typeof filtrarEventos === 'function') {
+                const eventosDestaque = filtrarEventos(window.eventos, { destaque: true }).slice(0, 4);
+                if (typeof renderizarEventos === 'function') {
+                    renderizarEventos(eventosDestaque, 'eventos-container');
+                }
+            }
+        });
+    </script>
 </body>
 </html>

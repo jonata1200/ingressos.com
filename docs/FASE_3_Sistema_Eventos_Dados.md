@@ -9,154 +9,154 @@ Criar estrutura de dados e exibição dinâmica de eventos
 
 ### 1. Estrutura de Dados
 
-- [ ] Criar arquivo `js/eventos.js`
-- [ ] Definir array de eventos com pelo menos 8-10 eventos de exemplo
-- [ ] Cada evento deve conter:
-  - [ ] `id` (número único)
-  - [ ] `nome` (string)
-  - [ ] `data` (string formatada: "DD/MM/YYYY")
-  - [ ] `hora` (string: "HH:MM")
-  - [ ] `local` (string com nome do local)
-  - [ ] `endereco` (string com endereço completo)
-  - [ ] `preco` (número - valor do ingresso)
-  - [ ] `categoria` (string: "Show", "Teatro", "Esporte", "Festival", etc.)
-  - [ ] `imagem` (string com caminho da imagem)
-  - [ ] `descricao` (string com descrição detalhada)
-  - [ ] `ingressosDisponiveis` (número - quantidade disponível)
-  - [ ] `destaque` (boolean - se aparece na home)
-- [ ] Criar eventos variados:
-  - [ ] Diferentes categorias
-  - [ ] Diferentes preços
-  - [ ] Alguns em destaque, outros não
-  - [ ] Datas futuras variadas
+- [x] Criar arquivo `js/eventos.js`
+- [x] Definir array de eventos com pelo menos 8-10 eventos de exemplo
+- [x] Cada evento deve conter:
+  - [x] `id` (número único)
+  - [x] `nome` (string)
+  - [x] `data` (string formatada: "DD/MM/YYYY")
+  - [x] `hora` (string: "HH:MM")
+  - [x] `local` (string com nome do local)
+  - [x] `endereco` (string com endereço completo)
+  - [x] `preco` (número - valor do ingresso)
+  - [x] `categoria` (string: "Show", "Teatro", "Esporte", "Festival", etc.)
+  - [x] `imagem` (string com caminho da imagem)
+  - [x] `descricao` (string com descrição detalhada)
+  - [x] `ingressosDisponiveis` (número - quantidade disponível)
+  - [x] `destaque` (boolean - se aparece na home)
+- [x] Criar eventos variados:
+  - [x] Diferentes categorias
+  - [x] Diferentes preços
+  - [x] Alguns em destaque, outros não
+  - [x] Datas futuras variadas
 
 ### 2. Funções Utilitárias
 
-- [ ] Criar arquivo `js/utils.js`
-- [ ] Função para formatar preço:
-  - [ ] Converter número para formato "R$ XX,XX"
-  - [ ] Exemplo: `formatarPreco(150.50)` → `"R$ 150,50"`
-- [ ] Função para formatar data:
-  - [ ] Converter data para formato legível
-  - [ ] Exemplo: `formatarData("2024-12-25")` → `"25 de Dezembro de 2024"`
-- [ ] Função para obter evento por ID:
-  - [ ] Receber ID como parâmetro
-  - [ ] Retornar objeto do evento correspondente
-  - [ ] Retornar null se não encontrar
-- [ ] Função para filtrar eventos:
-  - [ ] Por categoria
-  - [ ] Por nome (busca)
-  - [ ] Por data (opcional)
-  - [ ] Combinar múltiplos filtros
+- [x] Criar arquivo `js/utils.js`
+- [x] Função para formatar preço:
+  - [x] Converter número para formato "R$ XX,XX"
+  - [x] Exemplo: `formatarPreco(150.50)` → `"R$ 150,50"`
+- [x] Função para formatar data:
+  - [x] Converter data para formato legível
+  - [x] Exemplo: `formatarData("2024-12-25")` → `"25 de Dezembro de 2024"`
+- [x] Função para obter evento por ID:
+  - [x] Receber ID como parâmetro
+  - [x] Retornar objeto do evento correspondente
+  - [x] Retornar null se não encontrar
+- [x] Função para filtrar eventos:
+  - [x] Por categoria
+  - [x] Por nome (busca)
+  - [x] Por data (opcional)
+  - [x] Combinar múltiplos filtros
 
 ### 3. Renderização Dinâmica - Cards de Eventos
 
-- [ ] Criar função `renderizarEventos()`:
-  - [ ] Receber array de eventos como parâmetro
-  - [ ] Receber container HTML onde renderizar
-  - [ ] Limpar container antes de renderizar
-- [ ] Para cada evento, criar HTML do card:
-  - [ ] Estrutura do card (div com classes)
-  - [ ] Imagem do evento (com alt text)
-  - [ ] Badge de categoria (opcional)
-  - [ ] Título do evento
-  - [ ] Data e hora formatadas
-  - [ ] Local do evento
-  - [ ] Preço formatado
-  - [ ] Botão "Ver Detalhes" com link
-  - [ ] Indicador de ingressos disponíveis (se baixo)
-- [ ] Adicionar evento de clique no botão:
-  - [ ] Salvar ID do evento no localStorage
-  - [ ] Redirecionar para página de detalhes
-- [ ] Adicionar mensagem quando não houver eventos:
-  - [ ] Exibir mensagem amigável
-  - [ ] Sugerir limpar filtros
+- [x] Criar função `renderizarEventos()`:
+  - [x] Receber array de eventos como parâmetro
+  - [x] Receber container HTML onde renderizar
+  - [x] Limpar container antes de renderizar
+- [x] Para cada evento, criar HTML do card:
+  - [x] Estrutura do card (div com classes)
+  - [x] Imagem do evento (com alt text)
+  - [x] Badge de categoria (opcional)
+  - [x] Título do evento
+  - [x] Data e hora formatadas
+  - [x] Local do evento
+  - [x] Preço formatado
+  - [x] Botão "Ver Detalhes" com link
+  - [x] Indicador de ingressos disponíveis (se baixo)
+- [x] Adicionar evento de clique no botão:
+  - [x] Salvar ID do evento no localStorage
+  - [x] Redirecionar para página de detalhes
+- [x] Adicionar mensagem quando não houver eventos:
+  - [x] Exibir mensagem amigável
+  - [x] Sugerir limpar filtros
 
 ### 4. Renderização na Página Inicial
 
-- [ ] Atualizar `index.html`:
-  - [ ] Adicionar script `eventos.js`
-  - [ ] Adicionar script `utils.js`
-  - [ ] Adicionar script para renderização
-- [ ] Criar função para carregar eventos em destaque:
-  - [ ] Filtrar eventos com `destaque: true`
-  - [ ] Limitar a 4-6 eventos
-  - [ ] Chamar `renderizarEventos()`
-- [ ] Executar ao carregar página:
-  - [ ] Usar `DOMContentLoaded` ou colocar script no final do body
-  - [ ] Renderizar eventos na seção correta
+- [x] Atualizar `index.html`:
+  - [x] Adicionar script `eventos.js`
+  - [x] Adicionar script `utils.js`
+  - [x] Adicionar script para renderização
+- [x] Criar função para carregar eventos em destaque:
+  - [x] Filtrar eventos com `destaque: true`
+  - [x] Limitar a 4-6 eventos
+  - [x] Chamar `renderizarEventos()`
+- [x] Executar ao carregar página:
+  - [x] Usar `DOMContentLoaded` ou colocar script no final do body
+  - [x] Renderizar eventos na seção correta
 
 ### 5. Renderização na Página de Eventos
 
-- [ ] Atualizar `eventos.html`:
-  - [ ] Adicionar scripts necessários
-  - [ ] Identificar container para lista de eventos
-- [ ] Criar função para carregar todos os eventos:
-  - [ ] Carregar todos os eventos (ou filtrados)
-  - [ ] Renderizar na página
-- [ ] Integrar com filtros existentes:
-  - [ ] Ao aplicar filtro, atualizar lista renderizada
-  - [ ] Ao buscar, atualizar lista renderizada
-  - [ ] Combinar filtros e busca
+- [x] Atualizar `eventos.html`:
+  - [x] Adicionar scripts necessários
+  - [x] Identificar container para lista de eventos
+- [x] Criar função para carregar todos os eventos:
+  - [x] Carregar todos os eventos (ou filtrados)
+  - [x] Renderizar na página
+- [x] Integrar com filtros existentes:
+  - [x] Ao aplicar filtro, atualizar lista renderizada
+  - [x] Ao buscar, atualizar lista renderizada
+  - [x] Combinar filtros e busca
 
 ### 6. Página de Detalhes Dinâmica
 
-- [ ] Atualizar `detalhes.html`:
-  - [ ] Adicionar scripts necessários
-  - [ ] Identificar elementos para preencher:
-    - [ ] Imagem grande
-    - [ ] Título
-    - [ ] Data e hora
-    - [ ] Local e endereço
-    - [ ] Preço
-    - [ ] Descrição
-    - [ ] Categoria
-    - [ ] Ingressos disponíveis
-- [ ] Criar função `carregarDetalhesEvento()`:
-  - [ ] Obter ID do evento (URL parameter ou localStorage)
-  - [ ] Buscar evento pelo ID
-  - [ ] Preencher todos os campos
-  - [ ] Tratar caso evento não encontrado (404)
-- [ ] Adicionar seleção de quantidade:
-  - [ ] Input number ou select para quantidade
-  - [ ] Validação: não pode ser maior que disponível
-  - [ ] Validação: mínimo 1 ingresso
-- [ ] Atualizar botão "Adicionar ao Carrinho":
-  - [ ] Preparar para receber quantidade selecionada
-  - [ ] Salvar dados no localStorage (preparação para Fase 4)
+- [x] Atualizar `detalhes.html`:
+  - [x] Adicionar scripts necessários
+  - [x] Identificar elementos para preencher:
+    - [x] Imagem grande
+    - [x] Título
+    - [x] Data e hora
+    - [x] Local e endereço
+    - [x] Preço
+    - [x] Descrição
+    - [x] Categoria
+    - [x] Ingressos disponíveis
+- [x] Criar função `carregarDetalhesEvento()`:
+  - [x] Obter ID do evento (URL parameter ou localStorage)
+  - [x] Buscar evento pelo ID
+  - [x] Preencher todos os campos
+  - [x] Tratar caso evento não encontrado (404)
+- [x] Adicionar seleção de quantidade:
+  - [x] Input number ou select para quantidade
+  - [x] Validação: não pode ser maior que disponível
+  - [x] Validação: mínimo 1 ingresso
+- [x] Atualizar botão "Adicionar ao Carrinho":
+  - [x] Preparar para receber quantidade selecionada
+  - [x] Salvar dados no localStorage (preparação para Fase 4)
 
 ### 7. Armazenamento Local (LocalStorage)
 
-- [ ] Criar funções para gerenciar LocalStorage:
-  - [ ] `salvarNoLocalStorage(chave, dados)`
-  - [ ] `obterDoLocalStorage(chave)`
-  - [ ] `removerDoLocalStorage(chave)`
-  - [ ] `limparLocalStorage()` (opcional)
-- [ ] Salvar evento visualizado:
-  - [ ] Ao acessar detalhes, salvar no histórico
-  - [ ] Array de IDs de eventos visualizados
-  - [ ] Limitar histórico (ex: últimos 10)
+- [x] Criar funções para gerenciar LocalStorage:
+  - [x] `salvarNoLocalStorage(chave, dados)`
+  - [x] `obterDoLocalStorage(chave)`
+  - [x] `removerDoLocalStorage(chave)`
+  - [x] `limparLocalStorage()` (opcional)
+- [x] Salvar evento visualizado:
+  - [x] Ao acessar detalhes, salvar no histórico
+  - [x] Array de IDs de eventos visualizados
+  - [x] Limitar histórico (ex: últimos 10)
 - [ ] Implementar favoritos (opcional):
   - [ ] Botão "Favoritar" nos cards e detalhes
   - [ ] Salvar array de IDs favoritados
   - [ ] Alternar estado (adicionar/remover)
   - [ ] Indicador visual de favoritado
-- [ ] Persistir filtros selecionados:
-  - [ ] Salvar última categoria filtrada
-  - [ ] Salvar último termo de busca
-  - [ ] Restaurar ao voltar para página de eventos
+- [x] Persistir filtros selecionados:
+  - [x] Salvar última categoria filtrada
+  - [x] Salvar último termo de busca
+  - [x] Restaurar ao voltar para página de eventos
 
 ### 8. Melhorias na Exibição
 
 - [ ] Adicionar loading state:
   - [ ] Mostrar spinner ou skeleton enquanto carrega
   - [ ] Esconder após carregar eventos
-- [ ] Adicionar animação de entrada:
-  - [ ] Fade in nos cards
-  - [ ] Stagger animation (aparecer um por vez)
-- [ ] Melhorar feedback visual:
-  - [ ] Destaque em eventos com poucos ingressos
-  - [ ] Badge "Esgotado" se não houver ingressos
+- [x] Adicionar animação de entrada:
+  - [x] Fade in nos cards
+  - [x] Stagger animation (aparecer um por vez)
+- [x] Melhorar feedback visual:
+  - [x] Destaque em eventos com poucos ingressos
+  - [x] Badge "Esgotado" se não houver ingressos
   - [ ] Badge "Novo" para eventos recentes (opcional)
 - [ ] Adicionar paginação (opcional):
   - [ ] Limitar eventos por página
@@ -165,17 +165,17 @@ Criar estrutura de dados e exibição dinâmica de eventos
 
 ### 9. Validação e Tratamento de Erros
 
-- [ ] Validar dados dos eventos:
-  - [ ] Verificar se todos os campos obrigatórios existem
-  - [ ] Validar formato de data
-  - [ ] Validar preço (deve ser positivo)
-- [ ] Tratar erros:
-  - [ ] Evento não encontrado (404)
-  - [ ] Erro ao carregar dados
-  - [ ] Erro ao salvar no LocalStorage
-- [ ] Adicionar fallbacks:
-  - [ ] Se imagem não carregar, usar placeholder
-  - [ ] Se dados corrompidos, usar valores padrão
+- [x] Validar dados dos eventos:
+  - [x] Verificar se todos os campos obrigatórios existem
+  - [x] Validar formato de data
+  - [x] Validar preço (deve ser positivo)
+- [x] Tratar erros:
+  - [x] Evento não encontrado (404)
+  - [x] Erro ao carregar dados
+  - [x] Erro ao salvar no LocalStorage
+- [x] Adicionar fallbacks:
+  - [x] Se imagem não carregar, usar placeholder
+  - [x] Se dados corrompidos, usar valores padrão
 
 ### 10. Testes
 
