@@ -87,6 +87,7 @@
     <script src="js/eventos.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/renderizacao.js"></script>
+    <script src="js/carrinho.js"></script>
     <script src="js/navegacao.js"></script>
     <script>
         // Carregar detalhes do evento
@@ -124,41 +125,26 @@
             }
         }
         
-        // Função para adicionar ao carrinho (preparação para FASE 4)
-        function adicionarAoCarrinho(eventoId) {
-            const quantidade = parseInt(document.getElementById('quantidade-ingressos').value) || 1;
-            const evento = obterEventoPorId(eventoId);
+        // Função para adicionar ao carrinho
+        function adicionarAoCarrinhoDetalhes(eventoId) {
+            const quantidadeInput = document.getElementById('quantidade-ingressos');
+            const quantidade = parseInt(quantidadeInput.value) || 1;
             
-            if (!evento) {
-                alert('Evento não encontrado!');
-                return;
+            const resultado = adicionarAoCarrinho(eventoId, quantidade);
+            
+            if (resultado.sucesso) {
+                // Mostrar mensagem de sucesso
+                alert(resultado.mensagem);
+                // Opcional: redirecionar para carrinho
+                // window.location.href = 'carrinho.html';
+            } else {
+                alert(resultado.mensagem);
             }
-            
-            if (evento.ingressosDisponiveis < quantidade) {
-                alert(`Apenas ${evento.ingressosDisponiveis} ingressos disponíveis!`);
-                return;
-            }
-            
-            // Preparar dados para carrinho (será implementado na FASE 4)
-            const itemCarrinho = {
-                eventoId: evento.id,
-                nome: evento.nome,
-                data: evento.data,
-                local: evento.local,
-                precoUnitario: evento.preco,
-                quantidade: quantidade,
-                subtotal: evento.preco * quantidade,
-                imagem: evento.imagem
-            };
-            
-            // Por enquanto, apenas redirecionar para carrinho
-            // Na FASE 4, isso será implementado corretamente
-            alert(`Adicionado ao carrinho: ${quantidade} ingresso(s) de ${evento.nome}`);
-            // window.location.href = 'carrinho.html';
         }
         
         document.addEventListener('DOMContentLoaded', function() {
             carregarDetalhesEvento();
+            atualizarContadorCarrinho();
         });
     </script>
 </body>

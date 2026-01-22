@@ -54,13 +54,14 @@
                         <span id="resumo-subtotal">R$ 0,00</span>
                     </div>
                     <div class="resumo-item">
-                        <span>Taxa de serviço:</span>
+                        <span>Taxa de serviço (10%):</span>
                         <span id="resumo-taxa">R$ 0,00</span>
                     </div>
                     <div class="resumo-total">
                         <span>Total:</span>
                         <span id="resumo-total">R$ 0,00</span>
                     </div>
+                    <button onclick="limparCarrinhoComConfirmacao()" class="btn btn-secondary btn-limpar-carrinho" style="width: 100%; margin-top: var(--espacamento-md);">Limpar Carrinho</button>
                     <a href="checkout.html" class="btn btn-primary btn-large btn-finalizar">Finalizar Compra</a>
                     <a href="eventos.html" class="btn btn-secondary btn-continuar">Continuar Comprando</a>
                 </div>
@@ -96,6 +97,24 @@
         </div>
     </footer>
 
+    <script src="js/eventos.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/carrinho.js"></script>
     <script src="js/navegacao.js"></script>
+    <script>
+        // Função para limpar carrinho com confirmação
+        function limparCarrinhoComConfirmacao() {
+            if (confirm('Tem certeza que deseja limpar o carrinho?')) {
+                limparCarrinho();
+                renderizarCarrinho();
+            }
+        }
+        
+        // Carregar carrinho ao abrir página
+        document.addEventListener('DOMContentLoaded', function() {
+            renderizarCarrinho();
+            atualizarContadorCarrinho();
+        });
+    </script>
 </body>
 </html>

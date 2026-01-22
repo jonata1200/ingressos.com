@@ -47,5 +47,10 @@ function navegarParaDetalhes(eventoId) {
 // Inicializar quando o DOM estiver pronto
 document.addEventListener('DOMContentLoaded', function() {
     destacarPaginaAtiva();
-    atualizarContadorCarrinho();
+    // Aguardar carregamento do carrinho.js se necessário
+    setTimeout(() => {
+        if (typeof atualizarContadorCarrinho === 'function') {
+            atualizarContadorCarrinho();
+        }
+    }, 100);
 });

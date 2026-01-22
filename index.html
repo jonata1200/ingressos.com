@@ -83,6 +83,7 @@
     <script src="js/eventos.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/renderizacao.js"></script>
+    <script src="js/carrinho.js"></script>
     <script src="js/navegacao.js"></script>
     <script>
         // Carregar eventos em destaque
@@ -92,6 +93,9 @@
                 if (typeof renderizarEventos === 'function') {
                     renderizarEventos(eventosDestaque, 'eventos-container');
                 }
+            }
+            if (typeof atualizarContadorCarrinho === 'function') {
+                atualizarContadorCarrinho();
             }
         });
     </script>

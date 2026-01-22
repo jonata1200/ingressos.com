@@ -147,7 +147,7 @@ function renderizarDetalhesEvento(evento, containerId = 'detalhes-content') {
                 >
                 <button 
                     class="btn btn-primary btn-large" 
-                    onclick="adicionarAoCarrinho(${evento.id})"
+                    onclick="adicionarAoCarrinhoDetalhes(${evento.id})"
                     ${evento.ingressosDisponiveis === 0 ? 'disabled' : ''}
                 >
                     ${evento.ingressosDisponiveis === 0 ? 'Esgotado' : 'Adicionar ao Carrinho'}
