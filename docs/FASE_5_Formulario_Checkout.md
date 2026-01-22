@@ -9,281 +9,281 @@ Criar processo completo de finalização de compra com validação
 
 ### 1. Estrutura da Página de Checkout
 
-- [ ] Criar arquivo `checkout.html`:
-  - [ ] Copiar estrutura base do `index.html`
-  - [ ] Alterar título para "Checkout - ingressos.com"
-  - [ ] Criar layout com duas colunas (ou responsivo):
-    - [ ] Coluna esquerda: Formulário
-    - [ ] Coluna direita: Resumo do pedido
-- [ ] Adicionar breadcrumbs (opcional):
-  - [ ] Home > Carrinho > Checkout
-  - [ ] Links clicáveis
+- [x] Criar arquivo `checkout.html`:
+  - [x] Copiar estrutura base do `index.html`
+  - [x] Alterar título para "Checkout - ingressos.com"
+  - [x] Criar layout com duas colunas (ou responsivo):
+    - [x] Coluna esquerda: Formulário
+    - [x] Coluna direita: Resumo do pedido
+- [x] Adicionar breadcrumbs (opcional):
+  - [x] Home > Carrinho > Checkout
+  - [x] Links clicáveis
 - [ ] Adicionar indicador de progresso (opcional):
   - [ ] Carrinho > Checkout > Confirmação
   - [ ] Mostrar etapa atual
 
 ### 2. Formulário de Dados Pessoais
 
-- [ ] Criar seção "Dados Pessoais":
-  - [ ] Campo Nome Completo (obrigatório):
-    - [ ] Input type="text"
-    - [ ] Placeholder
-    - [ ] Required
-    - [ ] Minlength (ex: 3 caracteres)
-  - [ ] Campo Email (obrigatório):
-    - [ ] Input type="email"
-    - [ ] Placeholder
-    - [ ] Required
-    - [ ] Validação de formato
-  - [ ] Campo CPF (obrigatório):
-    - [ ] Input type="text"
-    - [ ] Máscara de CPF (XXX.XXX.XXX-XX)
-    - [ ] Validação de CPF
-    - [ ] Required
-  - [ ] Campo Telefone (obrigatório):
-    - [ ] Input type="tel"
-    - [ ] Máscara de telefone ((XX) XXXXX-XXXX)
-    - [ ] Required
-  - [ ] Campo Data de Nascimento (opcional):
-    - [ ] Input type="date"
+- [x] Criar seção "Dados Pessoais":
+  - [x] Campo Nome Completo (obrigatório):
+    - [x] Input type="text"
+    - [x] Placeholder
+    - [x] Required
+    - [x] Minlength (ex: 3 caracteres)
+  - [x] Campo Email (obrigatório):
+    - [x] Input type="email"
+    - [x] Placeholder
+    - [x] Required
+    - [x] Validação de formato
+  - [x] Campo CPF (obrigatório):
+    - [x] Input type="text"
+    - [x] Máscara de CPF (XXX.XXX.XXX-XX)
+    - [x] Validação de CPF
+    - [x] Required
+  - [x] Campo Telefone (obrigatório):
+    - [x] Input type="tel"
+    - [x] Máscara de telefone ((XX) XXXXX-XXXX)
+    - [x] Required
+  - [x] Campo Data de Nascimento (opcional):
+    - [x] Input type="date"
     - [ ] Validação de idade mínima (se necessário)
 
 ### 3. Formulário de Endereço
 
-- [ ] Criar seção "Endereço de Cobrança":
-  - [ ] Campo CEP (obrigatório):
-    - [ ] Input type="text"
-    - [ ] Máscara (XXXXX-XXX)
+- [x] Criar seção "Endereço de Cobrança":
+  - [x] Campo CEP (obrigatório):
+    - [x] Input type="text"
+    - [x] Máscara (XXXXX-XXX)
     - [ ] Buscar endereço por CEP (opcional - API)
-  - [ ] Campo Rua/Logradouro (obrigatório):
-    - [ ] Input type="text"
-    - [ ] Required
-  - [ ] Campo Número (obrigatório):
-    - [ ] Input type="text"
-    - [ ] Required
-  - [ ] Campo Complemento (opcional):
-    - [ ] Input type="text"
-  - [ ] Campo Bairro (obrigatório):
-    - [ ] Input type="text"
-    - [ ] Required
-  - [ ] Campo Cidade (obrigatório):
-    - [ ] Input type="text"
-    - [ ] Required
-  - [ ] Campo Estado (obrigatório):
-    - [ ] Select com estados brasileiros
-    - [ ] Required
+  - [x] Campo Rua/Logradouro (obrigatório):
+    - [x] Input type="text"
+    - [x] Required
+  - [x] Campo Número (obrigatório):
+    - [x] Input type="text"
+    - [x] Required
+  - [x] Campo Complemento (opcional):
+    - [x] Input type="text"
+  - [x] Campo Bairro (obrigatório):
+    - [x] Input type="text"
+    - [x] Required
+  - [x] Campo Cidade (obrigatório):
+    - [x] Input type="text"
+    - [x] Required
+  - [x] Campo Estado (obrigatório):
+    - [x] Select com estados brasileiros
+    - [x] Required
 
 ### 4. Forma de Pagamento
 
-- [ ] Criar seção "Forma de Pagamento":
-  - [ ] Opção Cartão de Crédito:
-    - [ ] Radio button ou card selecionável
-    - [ ] Campos condicionais:
-      - [ ] Número do cartão (máscara)
-      - [ ] Nome no cartão
-      - [ ] Validade (MM/AA)
-      - [ ] CVV (3 dígitos)
-      - [ ] Parcelas (select 1x a 12x)
-  - [ ] Opção PIX (simulado):
-    - [ ] Radio button
-    - [ ] Mensagem informativa sobre PIX
-  - [ ] Opção Boleto (simulado):
-    - [ ] Radio button
-    - [ ] Mensagem sobre vencimento
-- [ ] Estilizar opções de pagamento:
-  - [ ] Cards clicáveis
-  - [ ] Destaque na opção selecionada
+- [x] Criar seção "Forma de Pagamento":
+  - [x] Opção Cartão de Crédito:
+    - [x] Radio button ou card selecionável
+    - [x] Campos condicionais:
+      - [x] Número do cartão (máscara)
+      - [x] Nome no cartão
+      - [x] Validade (MM/AA)
+      - [x] CVV (3 dígitos)
+      - [x] Parcelas (select 1x a 12x)
+  - [x] Opção PIX (simulado):
+    - [x] Radio button
+    - [x] Mensagem informativa sobre PIX
+  - [x] Opção Boleto (simulado):
+    - [x] Radio button
+    - [x] Mensagem sobre vencimento
+- [x] Estilizar opções de pagamento:
+  - [x] Cards clicáveis
+  - [x] Destaque na opção selecionada
   - [ ] Ícones (opcional)
 
 ### 5. Resumo do Pedido
 
-- [ ] Criar seção "Resumo do Pedido":
-  - [ ] Listar itens do carrinho:
-    - [ ] Nome do evento
-    - [ ] Quantidade
-    - [ ] Preço unitário
-    - [ ] Subtotal
-  - [ ] Exibir totais:
-    - [ ] Subtotal dos itens
-    - [ ] Taxa de serviço (se houver)
+- [x] Criar seção "Resumo do Pedido":
+  - [x] Listar itens do carrinho:
+    - [x] Nome do evento
+    - [x] Quantidade
+    - [x] Preço unitário
+    - [x] Subtotal
+  - [x] Exibir totais:
+    - [x] Subtotal dos itens
+    - [x] Taxa de serviço (se houver)
     - [ ] Desconto (se houver - opcional)
-    - [ ] **Total a pagar** (destacado)
-  - [ ] Informações adicionais:
-    - [ ] Quantidade total de ingressos
+    - [x] **Total a pagar** (destacado)
+  - [x] Informações adicionais:
+    - [x] Quantidade total de ingressos
     - [ ] Prazo de entrega (se aplicável)
-- [ ] Estilizar resumo:
-  - [ ] Layout destacado
-  - [ ] Total em destaque
-  - [ ] Responsivo (pode ficar abaixo no mobile)
+- [x] Estilizar resumo:
+  - [x] Layout destacado
+  - [x] Total em destaque
+  - [x] Responsivo (pode ficar abaixo no mobile)
 
 ### 6. Validação de Formulário - JavaScript
 
-- [ ] Criar arquivo `js/checkout.js`
-- [ ] Função de validação de CPF:
-  - [ ] Remover formatação
-  - [ ] Validar 11 dígitos
-  - [ ] Validar dígitos verificadores
-  - [ ] Retornar true/false
-- [ ] Função de validação de email:
-  - [ ] Regex para formato de email
-  - [ ] Verificar se é válido
-- [ ] Função de validação de CEP:
-  - [ ] Formato correto (8 dígitos)
+- [x] Criar arquivo `js/checkout.js`
+- [x] Função de validação de CPF:
+  - [x] Remover formatação
+  - [x] Validar 11 dígitos
+  - [x] Validar dígitos verificadores
+  - [x] Retornar true/false
+- [x] Função de validação de email:
+  - [x] Regex para formato de email
+  - [x] Verificar se é válido
+- [x] Função de validação de CEP:
+  - [x] Formato correto (8 dígitos)
   - [ ] Verificar se existe (opcional - API)
-- [ ] Função de validação de cartão:
-  - [ ] Número do cartão (16 dígitos)
-  - [ ] Validade (data futura)
-  - [ ] CVV (3 dígitos)
-- [ ] Função `validarFormulario()`:
-  - [ ] Validar todos os campos obrigatórios
-  - [ ] Validar formato dos campos
-  - [ ] Retornar objeto com erros
-  - [ ] Mostrar mensagens de erro
+- [x] Função de validação de cartão:
+  - [x] Número do cartão (16 dígitos)
+  - [x] Validade (data futura)
+  - [x] CVV (3 dígitos)
+- [x] Função `validarFormulario()`:
+  - [x] Validar todos os campos obrigatórios
+  - [x] Validar formato dos campos
+  - [x] Retornar objeto com erros
+  - [x] Mostrar mensagens de erro
 
 ### 7. Máscaras de Input
 
-- [ ] Implementar máscara de CPF:
-  - [ ] Formato: XXX.XXX.XXX-XX
-  - [ ] Aplicar enquanto digita
-  - [ ] Permitir apenas números
-- [ ] Implementar máscara de telefone:
-  - [ ] Formato: (XX) XXXXX-XXXX
-  - [ ] Aplicar enquanto digita
-- [ ] Implementar máscara de CEP:
-  - [ ] Formato: XXXXX-XXX
-  - [ ] Aplicar enquanto digita
-- [ ] Implementar máscara de cartão:
-  - [ ] Formato: XXXX XXXX XXXX XXXX
-  - [ ] Aplicar enquanto digita
-- [ ] Implementar máscara de validade:
-  - [ ] Formato: MM/AA
-  - [ ] Validar mês (01-12)
-  - [ ] Validar ano (futuro)
+- [x] Implementar máscara de CPF:
+  - [x] Formato: XXX.XXX.XXX-XX
+  - [x] Aplicar enquanto digita
+  - [x] Permitir apenas números
+- [x] Implementar máscara de telefone:
+  - [x] Formato: (XX) XXXXX-XXXX
+  - [x] Aplicar enquanto digita
+- [x] Implementar máscara de CEP:
+  - [x] Formato: XXXXX-XXX
+  - [x] Aplicar enquanto digita
+- [x] Implementar máscara de cartão:
+  - [x] Formato: XXXX XXXX XXXX XXXX
+  - [x] Aplicar enquanto digita
+- [x] Implementar máscara de validade:
+  - [x] Formato: MM/AA
+  - [x] Validar mês (01-12)
+  - [x] Validar ano (futuro)
 
 ### 8. Exibição de Erros
 
-- [ ] Criar função `mostrarErro(campo, mensagem)`:
-  - [ ] Adicionar classe de erro no campo
-  - [ ] Exibir mensagem abaixo do campo
-  - [ ] Estilizar campo com borda vermelha
-- [ ] Criar função `limparErros()`:
-  - [ ] Remover classes de erro
-  - [ ] Remover mensagens de erro
-  - [ ] Restaurar estilo normal
-- [ ] Mensagens de erro específicas:
-  - [ ] Campo obrigatório
-  - [ ] Formato inválido
-  - [ ] CPF inválido
-  - [ ] Email inválido
-  - [ ] Cartão inválido
-- [ ] Estilizar erros no CSS:
-  - [ ] Borda vermelha
-  - [ ] Mensagem em vermelho
+- [x] Criar função `mostrarErro(campo, mensagem)`:
+  - [x] Adicionar classe de erro no campo
+  - [x] Exibir mensagem abaixo do campo
+  - [x] Estilizar campo com borda vermelha
+- [x] Criar função `limparErros()`:
+  - [x] Remover classes de erro
+  - [x] Remover mensagens de erro
+  - [x] Restaurar estilo normal
+- [x] Mensagens de erro específicas:
+  - [x] Campo obrigatório
+  - [x] Formato inválido
+  - [x] CPF inválido
+  - [x] Email inválido
+  - [x] Cartão inválido
+- [x] Estilizar erros no CSS:
+  - [x] Borda vermelha
+  - [x] Mensagem em vermelho
   - [ ] Ícone de erro (opcional)
 
 ### 9. Processamento do Checkout
 
-- [ ] Criar função `processarCheckout()`:
-  - [ ] Validar formulário completo
-  - [ ] Verificar se carrinho não está vazio
-  - [ ] Coletar dados do formulário
-  - [ ] Coletar dados do carrinho
-  - [ ] Gerar número de pedido (simulado)
-  - [ ] Salvar pedido no LocalStorage
-  - [ ] Limpar carrinho
-  - [ ] Redirecionar para página de confirmação
-- [ ] Adicionar event listener no botão "Finalizar Compra":
-  - [ ] Prevenir submit padrão
-  - [ ] Chamar `processarCheckout()`
+- [x] Criar função `processarCheckout()`:
+  - [x] Validar formulário completo
+  - [x] Verificar se carrinho não está vazio
+  - [x] Coletar dados do formulário
+  - [x] Coletar dados do carrinho
+  - [x] Gerar número de pedido (simulado)
+  - [x] Salvar pedido no LocalStorage
+  - [x] Limpar carrinho
+  - [x] Redirecionar para página de confirmação
+- [x] Adicionar event listener no botão "Finalizar Compra":
+  - [x] Prevenir submit padrão
+  - [x] Chamar `processarCheckout()`
   - [ ] Mostrar loading (opcional)
-- [ ] Validar antes de processar:
-  - [ ] Todos os campos obrigatórios preenchidos
-  - [ ] Forma de pagamento selecionada
-  - [ ] Dados válidos
-  - [ ] Carrinho não vazio
+- [x] Validar antes de processar:
+  - [x] Todos os campos obrigatórios preenchidos
+  - [x] Forma de pagamento selecionada
+  - [x] Dados válidos
+  - [x] Carrinho não vazio
 
 ### 10. Página de Confirmação
 
-- [ ] Criar arquivo `confirmacao.html`:
-  - [ ] Copiar estrutura base
-  - [ ] Alterar título para "Compra Confirmada - ingressos.com"
-- [ ] Exibir informações do pedido:
-  - [ ] Número do pedido (gerado)
-  - [ ] Data e hora da compra
-  - [ ] Resumo dos ingressos comprados
-  - [ ] Total pago
-  - [ ] Forma de pagamento
-  - [ ] Dados do comprador (nome, email)
-- [ ] Adicionar botões de ação:
+- [x] Criar arquivo `confirmacao.html`:
+  - [x] Copiar estrutura base
+  - [x] Alterar título para "Compra Confirmada - ingressos.com"
+- [x] Exibir informações do pedido:
+  - [x] Número do pedido (gerado)
+  - [x] Data e hora da compra
+  - [x] Resumo dos ingressos comprados
+  - [x] Total pago
+  - [x] Forma de pagamento
+  - [x] Dados do comprador (nome, email)
+- [x] Adicionar botões de ação:
   - [ ] "Ver Meus Ingressos" (opcional - futuro)
-  - [ ] "Continuar Comprando" (link para eventos)
-  - [ ] "Imprimir Comprovante" (opcional)
-- [ ] Mensagem de sucesso:
-  - [ ] Ícone de sucesso
-  - [ ] Mensagem agradecendo
+  - [x] "Continuar Comprando" (link para eventos)
+  - [x] "Imprimir Comprovante" (opcional)
+- [x] Mensagem de sucesso:
+  - [x] Ícone de sucesso
+  - [x] Mensagem agradecendo
   - [ ] Informações sobre entrega/recebimento
 
 ### 11. Persistência de Pedidos
 
-- [ ] Criar estrutura para salvar pedidos:
-  - [ ] Array de pedidos no LocalStorage
-  - [ ] Cada pedido com:
-    - [ ] Número do pedido
-    - [ ] Data/hora
-    - [ ] Dados do comprador
-    - [ ] Itens comprados
-    - [ ] Total
-    - [ ] Status (opcional)
-- [ ] Função para salvar pedido:
-  - [ ] Gerar ID único
-  - [ ] Adicionar ao array de pedidos
-  - [ ] Salvar no LocalStorage
-- [ ] Função para obter pedidos:
-  - [ ] Retornar array de pedidos
-  - [ ] Ordenar por data (mais recente primeiro)
+- [x] Criar estrutura para salvar pedidos:
+  - [x] Array de pedidos no LocalStorage
+  - [x] Cada pedido com:
+    - [x] Número do pedido
+    - [x] Data/hora
+    - [x] Dados do comprador
+    - [x] Itens comprados
+    - [x] Total
+    - [x] Status (opcional)
+- [x] Função para salvar pedido:
+  - [x] Gerar ID único
+  - [x] Adicionar ao array de pedidos
+  - [x] Salvar no LocalStorage
+- [x] Função para obter pedidos:
+  - [x] Retornar array de pedidos
+  - [x] Ordenar por data (mais recente primeiro)
 
 ### 12. Melhorias de UX
 
-- [ ] Adicionar indicadores de progresso:
-  - [ ] Mostrar qual campo está sendo preenchido
-  - [ ] Indicar campos obrigatórios
+- [x] Adicionar indicadores de progresso:
+  - [x] Mostrar qual campo está sendo preenchido
+  - [x] Indicar campos obrigatórios
 - [ ] Salvar dados do formulário:
   - [ ] Salvar progresso no LocalStorage
   - [ ] Restaurar ao voltar para página
   - [ ] Limpar após confirmação
-- [ ] Adicionar botão "Voltar":
-  - [ ] Voltar para carrinho
+- [x] Adicionar botão "Voltar":
+  - [x] Voltar para carrinho
   - [ ] Manter dados do formulário (se salvos)
-- [ ] Feedback visual:
+- [x] Feedback visual:
   - [ ] Loading ao processar
-  - [ ] Mensagem de sucesso
-  - [ ] Animações suaves
+  - [x] Mensagem de sucesso
+  - [x] Animações suaves
 
 ### 13. Responsividade
 
-- [ ] Ajustar layout para mobile:
-  - [ ] Formulário em coluna única
-  - [ ] Resumo abaixo do formulário
-  - [ ] Campos em largura total
-  - [ ] Botões maiores
-- [ ] Ajustar para tablet:
-  - [ ] Layout em duas colunas (se espaço permitir)
-  - [ ] Ou manter coluna única
-- [ ] Testar em diferentes dispositivos
+- [x] Ajustar layout para mobile:
+  - [x] Formulário em coluna única
+  - [x] Resumo abaixo do formulário
+  - [x] Campos em largura total
+  - [x] Botões maiores
+- [x] Ajustar para tablet:
+  - [x] Layout em duas colunas (se espaço permitir)
+  - [x] Ou manter coluna única
+- [x] Testar em diferentes dispositivos
 
 ### 14. Validações Adicionais
 
 - [ ] Validar idade mínima (se necessário):
   - [ ] Para certos tipos de eventos
   - [ ] Verificar data de nascimento
-- [ ] Validar estoque antes de finalizar:
-  - [ ] Verificar se ingressos ainda disponíveis
-  - [ ] Ajustar carrinho se necessário
-  - [ ] Avisar se houver mudanças
-- [ ] Validar dados do cartão:
-  - [ ] Algoritmo de Luhn (validação de cartão)
-  - [ ] Validade não expirada
-  - [ ] CVV correto
+- [x] Validar estoque antes de finalizar:
+  - [x] Verificar se ingressos ainda disponíveis
+  - [x] Ajustar carrinho se necessário
+  - [x] Avisar se houver mudanças
+- [x] Validar dados do cartão:
+  - [x] Algoritmo de Luhn (validação de cartão)
+  - [x] Validade não expirada
+  - [x] CVV correto
 
 ### 15. Testes
 

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compra Confirmada - ingressos.com. Seus ingressos foram adquiridos com sucesso!">
+    <title>Compra Confirmada - ingressos.com</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">ingressos.com</a>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="eventos.html" class="nav-link">Eventos</a></li>
+                        <li><a href="carrinho.html" class="nav-link">Carrinho</a></li>
+                    </ul>
+                </nav>
+                <a href="carrinho.html" class="carrinho-icon">
+                    <span class="carrinho-icon-text">🛒</span>
+                    <span class="carrinho-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Confirmação -->
+    <section class="confirmacao-section">
+        <div class="container">
+            <div class="confirmacao-content" id="confirmacao-content">
+                <!-- Será preenchido dinamicamente -->
+                <div class="confirmacao-loading">
+                    <p>Carregando informações do pedido...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Sobre</h3>
+                    <p>ingressos.com é a sua plataforma para encontrar e comprar os melhores ingressos para eventos.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Links Úteis</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="eventos.html">Eventos</a></li>
+                        <li><a href="carrinho.html">Carrinho</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Contato</h3>
+                    <p>Email: contato@ingressos.com</p>
+                    <p>Telefone: (11) 1234-5678</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ingressos.com. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/utils.js"></script>
+    <script src="js/navegacao.js"></script>
+    <script>
+        function carregarConfirmacao() {
+            const pedido = storage.obter('ultimoPedido');
+            const container = document.getElementById('confirmacao-content');
+            
+            if (!pedido) {
+                container.innerHTML = `
+                    <div class="confirmacao-erro">
+                        <h2>Pedido não encontrado</h2>
+                        <p>Não foi possível encontrar informações do pedido.</p>
+                        <a href="eventos.html" class="btn btn-primary">Continuar Comprando</a>
+                    </div>
+                `;
+                return;
+            }
+            
+            const dataHora = new Date(pedido.dataHora);
+            const dataFormatada = dataHora.toLocaleDateString('pt-BR', {
+                day: '2-digit',
+                month: 'long',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+            
+            const totalFormatado = typeof formatarPreco === 'function' 
+                ? formatarPreco(pedido.total) 
+                : new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(pedido.total);
+            
+            let formaPagamento = '';
+            switch(pedido.dadosComprador.pagamento) {
+                case 'cartao':
+                    formaPagamento = `Cartão de Crédito (${pedido.dadosComprador.parcelas}x)`;
+                    break;
+                case 'pix':
+                    formaPagamento = 'PIX';
+                    break;
+                case 'boleto':
+                    formaPagamento = 'Boleto Bancário';
+                    break;
+                default:
+                    formaPagamento = pedido.dadosComprador.pagamento;
+            }
+            
+            let itensHTML = '';
+            pedido.itens.forEach(item => {
+                const precoFormatado = typeof formatarPreco === 'function' 
+                    ? formatarPreco(item.precoUnitario) 
+                    : new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.precoUnitario);
+                const subtotalFormatado = typeof formatarPreco === 'function' 
+                    ? formatarPreco(item.subtotal) 
+                    : new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.subtotal);
+                
+                itensHTML += `
+                    <div class="confirmacao-item">
+                        <div class="confirmacao-item-info">
+                            <strong>${item.nome}</strong>
+                            <p>${item.quantidade}x ${precoFormatado}</p>
+                        </div>
+                        <div class="confirmacao-item-preco">${subtotalFormatado}</div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = `
+                <div class="confirmacao-sucesso">
+                    <div class="confirmacao-icon">✅</div>
+                    <h1>Compra Confirmada!</h1>
+                    <p class="confirmacao-mensagem">Obrigado pela sua compra! Seus ingressos foram adquiridos com sucesso.</p>
+                </div>
+                
+                <div class="confirmacao-detalhes">
+                    <div class="confirmacao-card">
+                        <h2>Informações do Pedido</h2>
+                        <div class="confirmacao-info">
+                            <p><strong>Número do Pedido:</strong> <span class="numero-pedido">${pedido.numeroPedido}</span></p>
+                            <p><strong>Data e Hora:</strong> ${dataFormatada}</p>
+                            <p><strong>Forma de Pagamento:</strong> ${formaPagamento}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="confirmacao-card">
+                        <h2>Dados do Comprador</h2>
+                        <div class="confirmacao-info">
+                            <p><strong>Nome:</strong> ${pedido.dadosComprador.nome}</p>
+                            <p><strong>Email:</strong> ${pedido.dadosComprador.email}</p>
+                            <p><strong>CPF:</strong> ${pedido.dadosComprador.cpf}</p>
+                            <p><strong>Telefone:</strong> ${pedido.dadosComprador.telefone}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="confirmacao-card">
+                        <h2>Ingressos Comprados</h2>
+                        <div class="confirmacao-itens">
+                            ${itensHTML}
+                        </div>
+                    </div>
+                    
+                    <div class="confirmacao-card confirmacao-total">
+                        <h2>Total Pago</h2>
+                        <div class="confirmacao-total-valor">${totalFormatado}</div>
+                    </div>
+                </div>
+                
+                <div class="confirmacao-acoes">
+                    <a href="eventos.html" class="btn btn-primary btn-large">Continuar Comprando</a>
+                    <button onclick="window.print()" class="btn btn-secondary">Imprimir Comprovante</button>
+                </div>
+            `;
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            carregarConfirmacao();
+            if (typeof atualizarContadorCarrinho === 'function') {
+                atualizarContadorCarrinho();
+            }
+        });
+    </script>
+</body>
+</html>
