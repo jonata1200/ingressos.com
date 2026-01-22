@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carrinho - ingressos.com. Revise seus ingressos antes de finalizar a compra.">
+    <title>Carrinho - ingressos.com</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">ingressos.com</a>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="eventos.html" class="nav-link">Eventos</a></li>
+                        <li><a href="carrinho.html" class="nav-link active">Carrinho</a></li>
+                    </ul>
+                </nav>
+                <a href="carrinho.html" class="carrinho-icon">
+                    <span class="carrinho-icon-text">🛒</span>
+                    <span class="carrinho-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Carrinho -->
+    <section class="carrinho-section">
+        <div class="container">
+            <h2 class="section-title">Meu Carrinho</h2>
+            
+            <div class="carrinho-content">
+                <!-- Itens do Carrinho -->
+                <div class="carrinho-itens" id="carrinho-itens">
+                    <!-- Itens serão inseridos aqui dinamicamente -->
+                    <div class="carrinho-vazio" id="carrinho-vazio">
+                        <p class="mensagem-carrinho-vazio">Seu carrinho está vazio</p>
+                        <a href="eventos.html" class="btn btn-primary">Ver Eventos</a>
+                    </div>
+                </div>
+
+                <!-- Resumo do Pedido -->
+                <div class="carrinho-resumo" id="carrinho-resumo" style="display: none;">
+                    <h3 class="resumo-titulo">Resumo do Pedido</h3>
+                    <div class="resumo-item">
+                        <span>Subtotal:</span>
+                        <span id="resumo-subtotal">R$ 0,00</span>
+                    </div>
+                    <div class="resumo-item">
+                        <span>Taxa de serviço:</span>
+                        <span id="resumo-taxa">R$ 0,00</span>
+                    </div>
+                    <div class="resumo-total">
+                        <span>Total:</span>
+                        <span id="resumo-total">R$ 0,00</span>
+                    </div>
+                    <a href="checkout.html" class="btn btn-primary btn-large btn-finalizar">Finalizar Compra</a>
+                    <a href="eventos.html" class="btn btn-secondary btn-continuar">Continuar Comprando</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Sobre</h3>
+                    <p>ingressos.com é a sua plataforma para encontrar e comprar os melhores ingressos para eventos.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Links Úteis</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="eventos.html">Eventos</a></li>
+                        <li><a href="carrinho.html">Carrinho</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Contato</h3>
+                    <p>Email: contato@ingressos.com</p>
+                    <p>Telefone: (11) 1234-5678</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ingressos.com. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/navegacao.js"></script>
+</body>
+</html>
