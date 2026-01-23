@@ -149,6 +149,9 @@ function renderizarDetalhesEvento(evento, containerId = 'detalhes-content') {
             ${indicadorIngressos}
             <div class="detalhes-preco">${precoFormatado}</div>
             <p class="detalhes-descricao">${evento.descricao || 'Descrição não disponível.'}</p>
+            <div class="detalhes-acoes-compartilhar">
+                ${typeof criarBotaoCompartilhar === 'function' ? '<div id="botao-compartilhar-container"></div>' : ''}
+            </div>
             <div class="detalhes-acoes">
                 <label for="quantidade-ingressos">Quantidade:</label>
                 <input 
@@ -169,6 +172,18 @@ function renderizarDetalhesEvento(evento, containerId = 'detalhes-content') {
             </div>
         </div>
     `;
+    
+    // Salvar visualização
+    if (typeof salvarEventoVisualizado === 'function') {
+        salvarEventoVisualizado(evento.id);
+    }
+    
+    // Adicionar botão de compartilhar
+    const compartilharContainer = container.querySelector('#botao-compartilhar-container');
+    if (compartilharContainer && typeof criarBotaoCompartilhar === 'function') {
+        const botaoCompartilhar = criarBotaoCompartilhar(evento);
+        compartilharContainer.appendChild(botaoCompartilhar);
+    }
 }
 
 // Exportar funções para uso global

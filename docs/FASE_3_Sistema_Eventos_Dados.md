@@ -136,11 +136,13 @@ Criar estrutura de dados e exibição dinâmica de eventos
   - [x] Ao acessar detalhes, salvar no histórico
   - [x] Array de IDs de eventos visualizados
   - [x] Limitar histórico (ex: últimos 10)
-- [ ] Implementar favoritos (opcional):
-  - [ ] Botão "Favoritar" nos cards e detalhes
-  - [ ] Salvar array de IDs favoritados
-  - [ ] Alternar estado (adicionar/remover)
-  - [ ] Indicador visual de favoritado
+- [x] Implementar favoritos (opcional):
+  - [x] Botão "Favoritar" nos cards e detalhes
+  - [x] Salvar array de IDs favoritados
+  - [x] Alternar estado (adicionar/remover)
+  - [x] Indicador visual de favoritado
+  
+  **Nota:** Implementado na FASE 6 - Melhorias e Polimento
 - [x] Persistir filtros selecionados:
   - [x] Salvar última categoria filtrada
   - [x] Salvar último termo de busca

@@ -36,6 +36,11 @@ function aplicarFiltros() {
         eventosFiltrados = filtrarPorNome(eventosFiltrados);
     }
     
+    // Aplicar filtros avançados (se existir)
+    if (typeof aplicarFiltrosAvancados === 'function') {
+        eventosFiltrados = aplicarFiltrosAvancados(eventosFiltrados);
+    }
+    
     // Aplicar ordenação (se existir)
     if (typeof aplicarOrdenacao === 'function') {
         eventosFiltrados = aplicarOrdenacao(eventosFiltrados);
@@ -52,6 +57,11 @@ function aplicarFiltros() {
     if (typeof renderizarEventos === 'function') {
         renderizarEventos(eventosFiltrados);
     }
+}
+
+// Função para aplicar filtros combinados (usada por outros módulos)
+function aplicarFiltrosCombinados() {
+    aplicarFiltros();
 }
 
 // Função para configurar botões de categoria
@@ -93,6 +103,11 @@ function limparFiltros() {
     
     const limparBtn = document.getElementById('limpar-busca');
     if (limparBtn) limparBtn.style.display = 'none';
+    
+    // Limpar filtros avançados
+    if (typeof limparFiltrosAvancados === 'function') {
+        limparFiltrosAvancados();
+    }
     
     // Aplicar filtros
     aplicarFiltros();
@@ -143,10 +158,12 @@ document.addEventListener('DOMContentLoaded', function() {
         configurarLimparFiltros();
         aplicarFiltros();
     }, 100);
+    
 });
 
 // Exportar funções para uso global
 if (typeof window !== 'undefined') {
     window.aplicarFiltros = aplicarFiltros;
+    window.aplicarFiltrosCombinados = aplicarFiltrosCombinados;
     window.categoriaSelecionada = categoriaSelecionada;
 }

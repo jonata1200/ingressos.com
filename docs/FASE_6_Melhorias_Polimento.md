@@ -13,7 +13,7 @@ Adicionar funcionalidades extras, melhorar UX e finalizar o projeto
   - [x] Transições suaves em botões (hover, active)
   - [x] Fade in nos cards de eventos
   - [x] Slide animations em modais/dropdowns
-  - [ ] Loading spinner animado
+  - [x] Loading spinner animado
 - [x] Efeitos hover nos cards:
   - [x] Elevação (box-shadow)
   - [x] Transform scale (leve aumento)
@@ -21,28 +21,26 @@ Adicionar funcionalidades extras, melhorar UX e finalizar o projeto
 - [x] Animações de entrada:
   - [x] Cards aparecem com fade in
   - [x] Stagger animation (um após o outro)
-  - [ ] Scroll animations (opcional - avançado)
+  - [ ] Scroll animations (opcional - avançado - pode ser implementado no futuro)
 - [x] Animações de feedback:
   - [x] Botão de adicionar ao carrinho (pulse ou bounce)
   - [x] Confirmação visual ao adicionar item
-  - [ ] Toast notifications (opcional)
+  - [ ] Toast notifications (opcional - sistema de mensagens inline implementado)
 
 ### 2. Loading States
 
-- [ ] Adicionar skeleton loaders:
-  - [ ] Placeholder enquanto carrega eventos
-  - [ ] Estrutura similar ao conteúdo final
-  - [ ] Animação de shimmer
-- [ ] Loading spinner:
-  - [ ] Ao carregar dados
-  - [ ] Ao processar checkout
-  - [ ] Ao buscar eventos
-- [ ] Estados de carregamento:
-  - [ ] Mostrar spinner durante operações
-  - [ ] Esconder após conclusão
-  - [ ] Mensagem de "Carregando..."
-  
-  **Nota:** Loading states são opcionais para este projeto de curso. Podem ser implementados em versões futuras.
+- [x] Adicionar skeleton loaders:
+  - [x] Placeholder enquanto carrega eventos
+  - [x] Estrutura similar ao conteúdo final
+  - [x] Animação de shimmer
+- [x] Loading spinner:
+  - [x] Ao carregar dados
+  - [x] Ao processar checkout
+  - [x] Ao buscar eventos
+- [x] Estados de carregamento:
+  - [x] Mostrar spinner durante operações
+  - [x] Esconder após conclusão
+  - [x] Mensagem de "Carregando..."
 
 ### 3. Mensagens de Feedback
 
@@ -68,16 +66,16 @@ Adicionar funcionalidades extras, melhorar UX e finalizar o projeto
   - [x] Buscar por nome do evento
   - [x] Buscar por local
   - [x] Buscar por categoria
-  - [ ] Buscar por data (opcional)
-- [ ] Adicionar filtros avançados:
-  - [ ] Filtro por faixa de preço (slider)
-  - [ ] Filtro por data (calendário)
-  - [ ] Filtro por localização
+  - [x] Buscar por data (implementado via filtros avançados)
+- [x] Adicionar filtros avançados:
+  - [x] Filtro por faixa de preço (slider)
+  - [x] Filtro por data (calendário)
+  - [x] Filtro por localização
   - [x] Combinar múltiplos filtros
-- [ ] Melhorar interface de busca:
-  - [ ] Autocomplete (opcional)
-  - [ ] Sugestões de busca
-  - [ ] Histórico de buscas (opcional)
+- [x] Melhorar interface de busca:
+  - [x] Autocomplete (opcional)
+  - [x] Sugestões de busca
+  - [x] Histórico de buscas (opcional)
 
 ### 5. Ordenação de Eventos
 
@@ -243,39 +241,41 @@ Adicionar funcionalidades extras, melhorar UX e finalizar o projeto
 
 ### 13. Documentação
 
-- [ ] Atualizar README.md:
-  - [ ] Descrição do projeto
-  - [ ] Tecnologias utilizadas
-  - [ ] Estrutura de arquivos
-  - [ ] Como executar
-  - [ ] Funcionalidades
+- [x] Atualizar README.md:
+  - [x] Descrição do projeto
+  - [x] Tecnologias utilizadas
+  - [x] Estrutura de arquivos
+  - [x] Como executar
+  - [x] Funcionalidades
   - [ ] Screenshots (opcional)
-- [ ] Comentar código:
-  - [ ] Funções principais comentadas
-  - [ ] Seções complexas explicadas
-  - [ ] Comentários úteis e claros
-- [ ] Criar guia de uso (opcional):
-  - [ ] Como adicionar eventos
-  - [ ] Como modificar estilos
-  - [ ] Como adicionar funcionalidades
+- [x] Comentar código:
+  - [x] Funções principais comentadas
+  - [x] Seções complexas explicadas
+  - [x] Comentários úteis e claros
+- [x] Criar guia de uso (opcional):
+  - [x] Como adicionar eventos (documentado no README)
+  - [x] Como modificar estilos (documentado no README)
+  - [x] Como adicionar funcionalidades (documentado no README)
 
 ### 14. Funcionalidades Extras (Opcional)
 
-- [ ] Histórico de visualizações:
-  - [ ] Salvar eventos visualizados
-  - [ ] Página "Vistos Recentemente"
+- [x] Histórico de visualizações:
+  - [x] Salvar eventos visualizados
+  - [x] Página "Vistos Recentemente"
 - [ ] Comparar eventos (opcional):
   - [ ] Selecionar eventos para comparar
   - [ ] Tabela comparativa
-- [ ] Compartilhar evento:
-  - [ ] Botão de compartilhar
-  - [ ] Link único para evento
-- [ ] Modo escuro (opcional - avançado):
-  - [ ] Toggle para alternar tema
-  - [ ] Salvar preferência
+- [x] Compartilhar evento:
+  - [x] Botão de compartilhar
+  - [x] Link único para evento
+- [x] Modo escuro (opcional - avançado):
+  - [x] Toggle para alternar tema
+  - [x] Salvar preferência
 - [ ] Idioma (opcional - avançado):
   - [ ] Português/Inglês
   - [ ] Trocar textos dinamicamente
+  
+  **Nota:** Comparar eventos e sistema de idiomas podem ser implementados em versões futuras.
 
 ### 15. Polimento Final
 
@@ -302,11 +302,15 @@ Adicionar funcionalidades extras, melhorar UX e finalizar o projeto
 ## Entregáveis da Fase 6
 
 - [x] Animações e transições implementadas
-- [x] Loading states em todas as operações
+- [x] Loading states em todas as operações (skeleton loaders e spinners)
 - [x] Sistema de feedback/mensagens
-- [x] Busca avançada e ordenação
+- [x] Busca avançada e ordenação (com autocomplete, sugestões e histórico)
+- [x] Filtros avançados (preço, data, localização)
 - [x] Sistema de favoritos
 - [x] Menu mobile funcional
+- [x] Histórico de visualizações e página "Vistos Recentemente"
+- [x] Sistema de compartilhamento de eventos
+- [x] Modo escuro com toggle
 - [x] Responsividade completa testada
 - [x] Acessibilidade básica implementada
 - [x] Performance otimizada

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ingressos.com - Seus ingressos aqui. Compre ingressos para shows, teatros, esportes e muito mais.">
-    <title>ingressos.com - Seus ingressos aqui</title>
+    <meta name="description" content="Eventos Vistos Recentemente - ingressos.com">
+    <title>Vistos Recentemente - ingressos.com</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,9 +23,9 @@
                 </button>
                 <nav class="nav">
                     <ul class="nav-list">
-                        <li><a href="index.html" class="nav-link active">Home</a></li>
+                        <li><a href="index.html" class="nav-link">Home</a></li>
                         <li><a href="eventos.html" class="nav-link">Eventos</a></li>
-                        <li><a href="vistos-recentemente.html" class="nav-link">Vistos Recentemente</a></li>
+                        <li><a href="vistos-recentemente.html" class="nav-link active">Vistos Recentemente</a></li>
                         <li><a href="carrinho.html" class="nav-link">Carrinho</a></li>
                     </ul>
                 </nav>
@@ -39,53 +39,62 @@
         <div id="menu-overlay" class="menu-overlay"></div>
         <nav id="menu-mobile" class="menu-mobile" aria-label="Menu de navegação">
             <ul class="nav-list">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="eventos.html" class="nav-link">Eventos</a></li>
-                <li><a href="vistos-recentemente.html" class="nav-link">Vistos Recentemente</a></li>
+                <li><a href="vistos-recentemente.html" class="nav-link active">Vistos Recentemente</a></li>
                 <li><a href="carrinho.html" class="nav-link">Carrinho</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Breadcrumbs -->
+    <section class="breadcrumbs">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Encontre os Melhores Eventos</h1>
-                <p class="hero-subtitle">Shows, teatros, esportes e muito mais. Seus ingressos estão aqui!</p>
-                <a href="eventos.html" class="btn btn-primary btn-large">Ver Eventos</a>
-            </div>
+            <nav aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <span> / </span>
+                <span>Vistos Recentemente</span>
+            </nav>
         </div>
     </section>
 
-    <!-- Eventos em Destaque -->
-    <section class="eventos-destaque">
-        <div class="container">
-            <h2 class="section-title">Eventos em Destaque</h2>
-            <div class="eventos-grid" id="eventos-container">
-                <!-- Cards de eventos serão inseridos aqui dinamicamente -->
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <section class="eventos-lista">
+            <div class="container">
+                <h1 class="section-title">Eventos Vistos Recentemente</h1>
+                <p class="section-subtitle">Continue explorando os eventos que você visualizou</p>
+                
+                <div id="eventos-container" class="eventos-grid">
+                    <!-- Eventos serão renderizados aqui -->
+                </div>
+                
+                <div id="mensagem-vazio" class="mensagem-vazia" style="display: none;">
+                    <p>Você ainda não visualizou nenhum evento.</p>
+                    <a href="eventos.html" class="btn btn-primary">Ver Eventos</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3 class="footer-title">Sobre</h3>
-                    <p>ingressos.com é a sua plataforma para encontrar e comprar os melhores ingressos para eventos.</p>
+                    <h3>ingressos.com</h3>
+                    <p>Seus ingressos aqui</p>
                 </div>
                 <div class="footer-section">
-                    <h3 class="footer-title">Links Úteis</h3>
-                    <ul class="footer-links">
+                    <h4>Links Úteis</h4>
+                    <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="eventos.html">Eventos</a></li>
                         <li><a href="carrinho.html">Carrinho</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3 class="footer-title">Contato</h3>
+                    <h4>Contato</h4>
                     <p>Email: contato@ingressos.com</p>
                     <p>Telefone: (11) 1234-5678</p>
                 </div>
@@ -101,19 +110,35 @@
     <script src="js/renderizacao.js"></script>
     <script src="js/carrinho.js"></script>
     <script src="js/favoritos.js"></script>
-    <script src="js/loading.js"></script>
     <script src="js/modo-escuro.js"></script>
     <script src="js/mobile-menu.js"></script>
     <script src="js/navegacao.js"></script>
     <script>
-        // Carregar eventos em destaque
         document.addEventListener('DOMContentLoaded', function() {
-            if (typeof window.eventos !== 'undefined' && typeof filtrarEventos === 'function') {
-                const eventosDestaque = filtrarEventos(window.eventos, { destaque: true }).slice(0, 4);
-                if (typeof renderizarEventos === 'function') {
-                    renderizarEventos(eventosDestaque, 'eventos-container');
+            // Carregar histórico de visualizações
+            const historico = obterHistoricoVisualizacoes();
+            const container = document.getElementById('eventos-container');
+            const mensagemVazio = document.getElementById('mensagem-vazio');
+            
+            if (historico.length === 0) {
+                container.style.display = 'none';
+                mensagemVazio.style.display = 'block';
+            } else {
+                // Obter eventos do histórico
+                const eventosVistos = historico
+                    .map(id => obterEventoPorId(id))
+                    .filter(evento => evento !== null);
+                
+                if (eventosVistos.length === 0) {
+                    container.style.display = 'none';
+                    mensagemVazio.style.display = 'block';
+                } else {
+                    if (typeof renderizarEventos === 'function') {
+                        renderizarEventos(eventosVistos, container);
+                    }
                 }
             }
+            
             if (typeof atualizarContadorCarrinho === 'function') {
                 atualizarContadorCarrinho();
             }

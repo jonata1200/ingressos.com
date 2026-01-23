@@ -25,6 +25,7 @@
                     <ul class="nav-list">
                         <li><a href="index.html" class="nav-link">Home</a></li>
                         <li><a href="eventos.html" class="nav-link active">Eventos</a></li>
+                        <li><a href="vistos-recentemente.html" class="nav-link">Vistos Recentemente</a></li>
                         <li><a href="carrinho.html" class="nav-link">Carrinho</a></li>
                     </ul>
                 </nav>
@@ -40,6 +41,7 @@
             <ul class="nav-list">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="eventos.html" class="nav-link active">Eventos</a></li>
+                <li><a href="vistos-recentemente.html" class="nav-link">Vistos Recentemente</a></li>
                 <li><a href="carrinho.html" class="nav-link">Carrinho</a></li>
             </ul>
         </nav>
@@ -65,6 +67,39 @@
                         <option value="nome-asc">Nome: A-Z</option>
                         <option value="nome-desc">Nome: Z-A</option>
                     </select>
+                </div>
+
+                <!-- Filtros Avançados -->
+                <div class="filtros-avancados-container">
+                    <h3 class="filtros-titulo">Filtros Avançados</h3>
+                    
+                    <!-- Filtro por Preço -->
+                    <div class="filtro-grupo">
+                        <label for="filtro-preco-min" class="filtro-label">Preço Mínimo (R$):</label>
+                        <input type="number" id="filtro-preco-min" class="filtro-input" min="0" step="0.01" placeholder="0.00">
+                    </div>
+                    
+                    <div class="filtro-grupo">
+                        <label for="filtro-preco-max" class="filtro-label">Preço Máximo (R$):</label>
+                        <input type="number" id="filtro-preco-max" class="filtro-input" min="0" step="0.01" placeholder="500.00">
+                    </div>
+                    
+                    <!-- Filtro por Data -->
+                    <div class="filtro-grupo">
+                        <label for="filtro-data-inicio" class="filtro-label">Data Início:</label>
+                        <input type="date" id="filtro-data-inicio" class="filtro-input">
+                    </div>
+                    
+                    <div class="filtro-grupo">
+                        <label for="filtro-data-fim" class="filtro-label">Data Fim:</label>
+                        <input type="date" id="filtro-data-fim" class="filtro-input">
+                    </div>
+                    
+                    <!-- Filtro por Localização -->
+                    <div class="filtro-grupo">
+                        <label for="filtro-localizacao" class="filtro-label">Localização:</label>
+                        <input type="text" id="filtro-localizacao" class="filtro-input" placeholder="Cidade, estado ou local...">
+                    </div>
                 </div>
 
                 <!-- Filtros por Categoria -->
@@ -131,6 +166,9 @@
     <script src="js/carrinho.js"></script>
     <script src="js/favoritos.js"></script>
     <script src="js/ordenacao.js"></script>
+    <script src="js/filtros-avancados.js"></script>
+    <script src="js/busca-melhorada.js"></script>
+    <script src="js/loading.js"></script>
     <script src="js/mobile-menu.js"></script>
     <script src="js/navegacao.js"></script>
     <script src="js/busca.js"></script>
@@ -140,9 +178,27 @@
             if (typeof configurarOrdenacao === 'function') {
                 configurarOrdenacao();
             }
+            if (typeof configurarFiltrosAvancados === 'function') {
+                configurarFiltrosAvancados();
+            }
+            if (typeof configurarBuscaMelhorada === 'function') {
+                configurarBuscaMelhorada();
+            }
             if (typeof atualizarContadorCarrinho === 'function') {
                 atualizarContadorCarrinho();
             }
+            
+            // Mostrar skeletons ao carregar
+            if (typeof mostrarSkeletons === 'function') {
+                mostrarSkeletons('eventos-container', 6);
+            }
+            
+            // Simular carregamento
+            setTimeout(() => {
+                if (typeof removerSkeletons === 'function') {
+                    removerSkeletons('eventos-container');
+                }
+            }, 500);
         });
     </script>
     <script>
