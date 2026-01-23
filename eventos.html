@@ -16,6 +16,11 @@
         <div class="container">
             <div class="header-content">
                 <a href="index.html" class="logo">ingressos.com</a>
+                <button id="menu-hamburger" class="menu-hamburger" aria-label="Abrir menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <nav class="nav">
                     <ul class="nav-list">
                         <li><a href="index.html" class="nav-link">Home</a></li>
@@ -23,12 +28,21 @@
                         <li><a href="carrinho.html" class="nav-link">Carrinho</a></li>
                     </ul>
                 </nav>
-                <a href="carrinho.html" class="carrinho-icon">
+                <a href="carrinho.html" class="carrinho-icon" aria-label="Carrinho de compras">
                     <span class="carrinho-icon-text">🛒</span>
-                    <span class="carrinho-badge">0</span>
+                    <span class="carrinho-badge" aria-live="polite">0</span>
                 </a>
             </div>
         </div>
+        <!-- Menu Mobile -->
+        <div id="menu-overlay" class="menu-overlay"></div>
+        <nav id="menu-mobile" class="menu-mobile" aria-label="Menu de navegação">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="eventos.html" class="nav-link active">Eventos</a></li>
+                <li><a href="carrinho.html" class="nav-link">Carrinho</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Filtros e Busca -->
@@ -38,21 +52,33 @@
                 <!-- Barra de Busca -->
                 <div class="busca-container">
                     <input type="text" id="busca-input" class="busca-input" placeholder="Buscar eventos..." aria-label="Buscar eventos">
-                    <button type="button" id="limpar-busca" class="btn-limpar" title="Limpar busca" style="display: none;">✕</button>
+                    <button type="button" id="limpar-busca" class="btn-limpar" title="Limpar busca" aria-label="Limpar busca" style="display: none;">✕</button>
+                </div>
+
+                <!-- Ordenação -->
+                <div class="ordenacao-container">
+                    <label for="ordenacao-select" class="ordenacao-label">Ordenar por:</label>
+                    <select id="ordenacao-select" class="ordenacao-select" aria-label="Ordenar eventos">
+                        <option value="data">Data (mais próximo)</option>
+                        <option value="preco-asc">Preço: Menor para Maior</option>
+                        <option value="preco-desc">Preço: Maior para Menor</option>
+                        <option value="nome-asc">Nome: A-Z</option>
+                        <option value="nome-desc">Nome: Z-A</option>
+                    </select>
                 </div>
 
                 <!-- Filtros por Categoria -->
                 <div class="categorias-container">
                     <h3 class="filtros-titulo">Categorias</h3>
                     <div class="categorias-buttons">
-                        <button class="categoria-btn active" data-categoria="todos">Todos</button>
-                        <button class="categoria-btn" data-categoria="Show">Shows</button>
-                        <button class="categoria-btn" data-categoria="Teatro">Teatro</button>
-                        <button class="categoria-btn" data-categoria="Esporte">Esportes</button>
-                        <button class="categoria-btn" data-categoria="Festival">Festivais</button>
-                        <button class="categoria-btn" data-categoria="Outro">Outros</button>
+                        <button class="categoria-btn active" data-categoria="todos" aria-label="Todos os eventos">Todos</button>
+                        <button class="categoria-btn" data-categoria="Show" aria-label="Filtrar por Shows">Shows</button>
+                        <button class="categoria-btn" data-categoria="Teatro" aria-label="Filtrar por Teatro">Teatro</button>
+                        <button class="categoria-btn" data-categoria="Esporte" aria-label="Filtrar por Esportes">Esportes</button>
+                        <button class="categoria-btn" data-categoria="Festival" aria-label="Filtrar por Festivais">Festivais</button>
+                        <button class="categoria-btn" data-categoria="Outro" aria-label="Filtrar por Outros">Outros</button>
                     </div>
-                    <button type="button" id="limpar-filtros" class="btn-limpar-filtros">Limpar Filtros</button>
+                    <button type="button" id="limpar-filtros" class="btn-limpar-filtros" aria-label="Limpar todos os filtros">Limpar Filtros</button>
                 </div>
             </div>
         </div>
@@ -103,9 +129,22 @@
     <script src="js/utils.js"></script>
     <script src="js/renderizacao.js"></script>
     <script src="js/carrinho.js"></script>
+    <script src="js/favoritos.js"></script>
+    <script src="js/ordenacao.js"></script>
+    <script src="js/mobile-menu.js"></script>
     <script src="js/navegacao.js"></script>
     <script src="js/busca.js"></script>
     <script src="js/filtros.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof configurarOrdenacao === 'function') {
+                configurarOrdenacao();
+            }
+            if (typeof atualizarContadorCarrinho === 'function') {
+                atualizarContadorCarrinho();
+            }
+        });
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             if (typeof atualizarContadorCarrinho === 'function') {

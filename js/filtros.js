@@ -36,6 +36,11 @@ function aplicarFiltros() {
         eventosFiltrados = filtrarPorNome(eventosFiltrados);
     }
     
+    // Aplicar ordenação (se existir)
+    if (typeof aplicarOrdenacao === 'function') {
+        eventosFiltrados = aplicarOrdenacao(eventosFiltrados);
+    }
+    
     eventosExibidos = eventosFiltrados;
     
     // Salvar filtros

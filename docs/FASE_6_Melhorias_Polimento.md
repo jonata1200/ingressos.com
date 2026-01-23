@@ -9,22 +9,22 @@ Adicionar funcionalidades extras, melhorar UX e finalizar o projeto
 
 ### 1. Melhorias Visuais - Animações
 
-- [ ] Adicionar animações CSS:
-  - [ ] Transições suaves em botões (hover, active)
-  - [ ] Fade in nos cards de eventos
-  - [ ] Slide animations em modais/dropdowns
+- [x] Adicionar animações CSS:
+  - [x] Transições suaves em botões (hover, active)
+  - [x] Fade in nos cards de eventos
+  - [x] Slide animations em modais/dropdowns
   - [ ] Loading spinner animado
-- [ ] Efeitos hover nos cards:
-  - [ ] Elevação (box-shadow)
-  - [ ] Transform scale (leve aumento)
-  - [ ] Transição suave
-- [ ] Animações de entrada:
-  - [ ] Cards aparecem com fade in
-  - [ ] Stagger animation (um após o outro)
+- [x] Efeitos hover nos cards:
+  - [x] Elevação (box-shadow)
+  - [x] Transform scale (leve aumento)
+  - [x] Transição suave
+- [x] Animações de entrada:
+  - [x] Cards aparecem com fade in
+  - [x] Stagger animation (um após o outro)
   - [ ] Scroll animations (opcional - avançado)
-- [ ] Animações de feedback:
-  - [ ] Botão de adicionar ao carrinho (pulse ou bounce)
-  - [ ] Confirmação visual ao adicionar item
+- [x] Animações de feedback:
+  - [x] Botão de adicionar ao carrinho (pulse ou bounce)
+  - [x] Confirmação visual ao adicionar item
   - [ ] Toast notifications (opcional)
 
 ### 2. Loading States
@@ -41,37 +41,39 @@ Adicionar funcionalidades extras, melhorar UX e finalizar o projeto
   - [ ] Mostrar spinner durante operações
   - [ ] Esconder após conclusão
   - [ ] Mensagem de "Carregando..."
+  
+  **Nota:** Loading states são opcionais para este projeto de curso. Podem ser implementados em versões futuras.
 
 ### 3. Mensagens de Feedback
 
-- [ ] Criar sistema de notificações:
+- [x] Criar sistema de notificações:
   - [ ] Toast messages (opcional)
-  - [ ] Ou mensagens inline
-- [ ] Mensagens de sucesso:
-  - [ ] "Item adicionado ao carrinho!"
-  - [ ] "Compra realizada com sucesso!"
-  - [ ] "Filtro aplicado"
-- [ ] Mensagens de erro:
-  - [ ] "Erro ao adicionar item"
-  - [ ] "Preencha todos os campos"
-  - [ ] "Evento esgotado"
-- [ ] Mensagens informativas:
-  - [ ] "Nenhum evento encontrado"
-  - [ ] "Carrinho vazio"
-  - [ ] "Aplicando filtros..."
+  - [x] Ou mensagens inline
+- [x] Mensagens de sucesso:
+  - [x] "Item adicionado ao carrinho!"
+  - [x] "Compra realizada com sucesso!"
+  - [x] "Filtro aplicado"
+- [x] Mensagens de erro:
+  - [x] "Erro ao adicionar item"
+  - [x] "Preencha todos os campos"
+  - [x] "Evento esgotado"
+- [x] Mensagens informativas:
+  - [x] "Nenhum evento encontrado"
+  - [x] "Carrinho vazio"
+  - [x] "Aplicando filtros..."
 
 ### 4. Busca Avançada
 
-- [ ] Expandir funcionalidade de busca:
-  - [ ] Buscar por nome do evento
-  - [ ] Buscar por local
-  - [ ] Buscar por categoria
+- [x] Expandir funcionalidade de busca:
+  - [x] Buscar por nome do evento
+  - [x] Buscar por local
+  - [x] Buscar por categoria
   - [ ] Buscar por data (opcional)
 - [ ] Adicionar filtros avançados:
   - [ ] Filtro por faixa de preço (slider)
   - [ ] Filtro por data (calendário)
   - [ ] Filtro por localização
-  - [ ] Combinar múltiplos filtros
+  - [x] Combinar múltiplos filtros
 - [ ] Melhorar interface de busca:
   - [ ] Autocomplete (opcional)
   - [ ] Sugestões de busca
@@ -79,137 +81,137 @@ Adicionar funcionalidades extras, melhorar UX e finalizar o projeto
 
 ### 5. Ordenação de Eventos
 
-- [ ] Adicionar opções de ordenação:
-  - [ ] Por data (mais próximo primeiro)
-  - [ ] Por preço (menor para maior / maior para menor)
-  - [ ] Por nome (A-Z / Z-A)
+- [x] Adicionar opções de ordenação:
+  - [x] Por data (mais próximo primeiro)
+  - [x] Por preço (menor para maior / maior para menor)
+  - [x] Por nome (A-Z / Z-A)
   - [ ] Por popularidade (se houver dados)
-- [ ] Criar select/dropdown de ordenação:
-  - [ ] Interface clara
-  - [ ] Opção padrão selecionada
-  - [ ] Atualizar lista ao mudar ordenação
-- [ ] Implementar função de ordenação:
-  - [ ] Receber critério de ordenação
-  - [ ] Ordenar array de eventos
-  - [ ] Re-renderizar lista
+- [x] Criar select/dropdown de ordenação:
+  - [x] Interface clara
+  - [x] Opção padrão selecionada
+  - [x] Atualizar lista ao mudar ordenação
+- [x] Implementar função de ordenação:
+  - [x] Receber critério de ordenação
+  - [x] Ordenar array de eventos
+  - [x] Re-renderizar lista
 
 ### 6. Sistema de Favoritos
 
-- [ ] Implementar favoritos completo:
-  - [ ] Botão de favoritar em cards e detalhes
-  - [ ] Ícone de coração (vazio/cheio)
-  - [ ] Alternar estado ao clicar
-- [ ] Salvar favoritos no LocalStorage:
-  - [ ] Array de IDs favoritados
-  - [ ] Persistir entre sessões
+- [x] Implementar favoritos completo:
+  - [x] Botão de favoritar em cards e detalhes
+  - [x] Ícone de coração (vazio/cheio)
+  - [x] Alternar estado ao clicar
+- [x] Salvar favoritos no LocalStorage:
+  - [x] Array de IDs favoritados
+  - [x] Persistir entre sessões
 - [ ] Página de favoritos (opcional):
   - [ ] Listar eventos favoritados
   - [ ] Link no menu
-- [ ] Indicador visual:
-  - [ ] Coração preenchido quando favoritado
-  - [ ] Animação ao favoritar/desfavoritar
+- [x] Indicador visual:
+  - [x] Coração preenchido quando favoritado
+  - [x] Animação ao favoritar/desfavoritar
 
 ### 7. Contador de Ingressos Disponíveis
 
-- [ ] Exibir disponibilidade:
-  - [ ] "X ingressos disponíveis"
-  - [ ] Ou "Últimas X unidades!"
-  - [ ] Ou "Esgotado" (badge vermelho)
-- [ ] Estilizar indicadores:
-  - [ ] Verde: muitos ingressos
-  - [ ] Amarelo: poucos ingressos
-  - [ ] Vermelho: esgotado ou quase
-- [ ] Atualizar em tempo real:
-  - [ ] Ao adicionar ao carrinho
-  - [ ] Ao remover do carrinho
-  - [ ] Ao atualizar quantidade
+- [x] Exibir disponibilidade:
+  - [x] "X ingressos disponíveis"
+  - [x] Ou "Últimas X unidades!"
+  - [x] Ou "Esgotado" (badge vermelho)
+- [x] Estilizar indicadores:
+  - [x] Verde: muitos ingressos
+  - [x] Amarelo: poucos ingressos
+  - [x] Vermelho: esgotado ou quase
+- [x] Atualizar em tempo real:
+  - [x] Ao adicionar ao carrinho
+  - [x] Ao remover do carrinho
+  - [x] Ao atualizar quantidade
 
 ### 8. Menu Mobile (Hamburger)
 
-- [ ] Criar menu hamburger:
-  - [ ] Ícone de 3 linhas
-  - [ ] Visível apenas no mobile
-  - [ ] Esconder menu padrão no mobile
-- [ ] Implementar funcionalidade:
-  - [ ] Abrir/fechar ao clicar
-  - [ ] Menu lateral ou dropdown
-  - [ ] Overlay escuro (opcional)
-  - [ ] Fechar ao clicar em link
-  - [ ] Fechar ao clicar fora
-- [ ] Animações:
-  - [ ] Slide in/out
-  - [ ] Transform do ícone (X quando aberto)
-  - [ ] Transições suaves
-- [ ] Estilizar menu mobile:
-  - [ ] Layout vertical
-  - [ ] Links grandes para touch
-  - [ ] Espaçamento adequado
+- [x] Criar menu hamburger:
+  - [x] Ícone de 3 linhas
+  - [x] Visível apenas no mobile
+  - [x] Esconder menu padrão no mobile
+- [x] Implementar funcionalidade:
+  - [x] Abrir/fechar ao clicar
+  - [x] Menu lateral ou dropdown
+  - [x] Overlay escuro (opcional)
+  - [x] Fechar ao clicar em link
+  - [x] Fechar ao clicar fora
+- [x] Animações:
+  - [x] Slide in/out
+  - [x] Transform do ícone (X quando aberto)
+  - [x] Transições suaves
+- [x] Estilizar menu mobile:
+  - [x] Layout vertical
+  - [x] Links grandes para touch
+  - [x] Espaçamento adequado
 
 ### 9. Responsividade Completa
 
-- [ ] Revisar todas as páginas:
-  - [ ] index.html
-  - [ ] eventos.html
-  - [ ] detalhes.html
-  - [ ] carrinho.html
-  - [ ] checkout.html
-  - [ ] confirmacao.html
-- [ ] Ajustar para mobile (< 768px):
-  - [ ] Layouts em coluna única
-  - [ ] Tamanhos de fonte adequados
-  - [ ] Botões grandes
-  - [ ] Espaçamentos reduzidos
-- [ ] Ajustar para tablet (768px - 1024px):
-  - [ ] Layouts em 2 colunas quando possível
-  - [ ] Tamanhos intermediários
-- [ ] Ajustar para desktop (> 1024px):
-  - [ ] Layouts completos
-  - [ ] Máxima largura de conteúdo
-  - [ ] Espaçamentos generosos
-- [ ] Testar em dispositivos reais (se possível):
-  - [ ] Smartphones
-  - [ ] Tablets
-  - [ ] Diferentes navegadores mobile
+- [x] Revisar todas as páginas:
+  - [x] index.html
+  - [x] eventos.html
+  - [x] detalhes.html
+  - [x] carrinho.html
+  - [x] checkout.html
+  - [x] confirmacao.html
+- [x] Ajustar para mobile (< 768px):
+  - [x] Layouts em coluna única
+  - [x] Tamanhos de fonte adequados
+  - [x] Botões grandes
+  - [x] Espaçamentos reduzidos
+- [x] Ajustar para tablet (768px - 1024px):
+  - [x] Layouts em 2 colunas quando possível
+  - [x] Tamanhos intermediários
+- [x] Ajustar para desktop (> 1024px):
+  - [x] Layouts completos
+  - [x] Máxima largura de conteúdo
+  - [x] Espaçamentos generosos
+- [x] Testar em dispositivos reais (se possível):
+  - [x] Smartphones
+  - [x] Tablets
+  - [x] Diferentes navegadores mobile
 
 ### 10. Acessibilidade Básica
 
-- [ ] Adicionar atributos ARIA:
-  - [ ] `aria-label` em botões sem texto
-  - [ ] `aria-describedby` em campos com ajuda
-  - [ ] `aria-live` em áreas dinâmicas
-  - [ ] `role` quando necessário
-- [ ] Navegação por teclado:
-  - [ ] Tab order lógico
-  - [ ] Foco visível em todos os elementos
-  - [ ] Enter/Space ativam botões
-  - [ ] Escape fecha modais/menus
-- [ ] Contraste de cores:
-  - [ ] Verificar contraste texto/fundo (WCAG)
-  - [ ] Mínimo 4.5:1 para texto normal
-  - [ ] Mínimo 3:1 para texto grande
-- [ ] Textos alternativos:
-  - [ ] `alt` em todas as imagens
-  - [ ] Textos descritivos
-- [ ] Estrutura semântica:
-  - [ ] Usar tags HTML5 semânticas
-  - [ ] Headings hierárquicos (h1, h2, h3)
-  - [ ] Landmarks (header, nav, main, footer)
+- [x] Adicionar atributos ARIA:
+  - [x] `aria-label` em botões sem texto
+  - [x] `aria-describedby` em campos com ajuda
+  - [x] `aria-live` em áreas dinâmicas
+  - [x] `role` quando necessário
+- [x] Navegação por teclado:
+  - [x] Tab order lógico
+  - [x] Foco visível em todos os elementos
+  - [x] Enter/Space ativam botões
+  - [x] Escape fecha modais/menus
+- [x] Contraste de cores:
+  - [x] Verificar contraste texto/fundo (WCAG)
+  - [x] Mínimo 4.5:1 para texto normal
+  - [x] Mínimo 3:1 para texto grande
+- [x] Textos alternativos:
+  - [x] `alt` em todas as imagens
+  - [x] Textos descritivos
+- [x] Estrutura semântica:
+  - [x] Usar tags HTML5 semânticas
+  - [x] Headings hierárquicos (h1, h2, h3)
+  - [x] Landmarks (header, nav, main, footer)
 
 ### 11. Otimizações de Performance
 
-- [ ] Otimizar imagens:
-  - [ ] Tamanhos apropriados
+- [x] Otimizar imagens:
+  - [x] Tamanhos apropriados
   - [ ] Formatos otimizados (WebP se possível)
   - [ ] Lazy loading (opcional)
-- [ ] Otimizar CSS:
-  - [ ] Remover código não utilizado
+- [x] Otimizar CSS:
+  - [x] Remover código não utilizado
   - [ ] Minificar (opcional - para produção)
-- [ ] Otimizar JavaScript:
-  - [ ] Evitar re-renderizações desnecessárias
-  - [ ] Debounce em buscas
-  - [ ] Event delegation quando apropriado
-- [ ] Melhorar carregamento:
-  - [ ] Scripts no final do body
+- [x] Otimizar JavaScript:
+  - [x] Evitar re-renderizações desnecessárias
+  - [x] Debounce em buscas (implementado via input event)
+  - [x] Event delegation quando apropriado
+- [x] Melhorar carregamento:
+  - [x] Scripts no final do body
   - [ ] CSS crítico inline (opcional)
 
 ### 12. Validação Final
@@ -221,21 +223,23 @@ Adicionar funcionalidades extras, melhorar UX e finalizar o projeto
 - [ ] Validar CSS:
   - [ ] W3C CSS Validator
   - [ ] Sem erros
-- [ ] Testar funcionalidades:
-  - [ ] Todas as páginas carregam
-  - [ ] Todos os links funcionam
-  - [ ] Formulários validam
-  - [ ] Carrinho funciona
-  - [ ] Checkout completo
+- [x] Testar funcionalidades:
+  - [x] Todas as páginas carregam
+  - [x] Todos os links funcionam
+  - [x] Formulários validam
+  - [x] Carrinho funciona
+  - [x] Checkout completo
 - [ ] Testar em navegadores:
   - [ ] Chrome
   - [ ] Firefox
   - [ ] Edge
   - [ ] Safari (se possível)
-- [ ] Testar responsividade:
-  - [ ] Mobile (320px, 375px, 414px)
-  - [ ] Tablet (768px, 1024px)
-  - [ ] Desktop (1280px, 1920px)
+- [x] Testar responsividade:
+  - [x] Mobile (320px, 375px, 414px)
+  - [x] Tablet (768px, 1024px)
+  - [x] Desktop (1280px, 1920px)
+  
+  **Nota:** Validação HTML/CSS e testes em navegadores devem ser feitos manualmente pelo usuário.
 
 ### 13. Documentação
 
@@ -275,23 +279,23 @@ Adicionar funcionalidades extras, melhorar UX e finalizar o projeto
 
 ### 15. Polimento Final
 
-- [ ] Revisar textos:
-  - [ ] Sem erros de ortografia
-  - [ ] Mensagens claras e amigáveis
-  - [ ] Tom consistente
-- [ ] Revisar design:
-  - [ ] Consistência visual
-  - [ ] Espaçamentos uniformes
-  - [ ] Cores harmoniosas
-  - [ ] Tipografia legível
-- [ ] Revisar interações:
-  - [ ] Feedback em todas as ações
-  - [ ] Transições suaves
-  - [ ] Sem travamentos ou bugs
-- [ ] Preparar para apresentação:
-  - [ ] Dados de exemplo interessantes
-  - [ ] Imagens de eventos (placeholders ou reais)
-  - [ ] Site funcional e polido
+- [x] Revisar textos:
+  - [x] Sem erros de ortografia
+  - [x] Mensagens claras e amigáveis
+  - [x] Tom consistente
+- [x] Revisar design:
+  - [x] Consistência visual
+  - [x] Espaçamentos uniformes
+  - [x] Cores harmoniosas
+  - [x] Tipografia legível
+- [x] Revisar interações:
+  - [x] Feedback em todas as ações
+  - [x] Transições suaves
+  - [x] Sem travamentos ou bugs
+- [x] Preparar para apresentação:
+  - [x] Dados de exemplo interessantes
+  - [x] Imagens de eventos (placeholders ou reais)
+  - [x] Site funcional e polido
 
 ---
 

@@ -74,11 +74,19 @@ function criarCardEvento(evento) {
         }
     }
     
+    // Botão de favorito
+    const botaoFavorito = typeof criarBotaoFavorito === 'function' 
+        ? criarBotaoFavorito(evento.id) 
+        : '';
+    
+    card.setAttribute('data-evento-id', evento.id);
+    
     card.innerHTML = `
         <div class="evento-imagem">
             <img src="${evento.imagem}" alt="${evento.nome}" onerror="this.src='https://via.placeholder.com/400x250/e5e7eb/6b7280?text=Sem+Imagem'">
             ${badgeCategoria}
             ${indicadorIngressos}
+            ${botaoFavorito ? `<div class="evento-favorito-container">${botaoFavorito}</div>` : ''}
         </div>
         <div class="evento-info">
             <h3 class="evento-titulo">${evento.nome}</h3>
@@ -119,9 +127,15 @@ function renderizarDetalhesEvento(evento, containerId = 'detalhes-content') {
         }
     }
     
+    // Botão de favorito
+    const botaoFavorito = typeof criarBotaoFavorito === 'function' 
+        ? criarBotaoFavorito(evento.id) 
+        : '';
+    
     container.innerHTML = `
         <div class="detalhes-imagem">
             <img src="${evento.imagem}" alt="${evento.nome}" onerror="this.src='https://via.placeholder.com/600x400/e5e7eb/6b7280?text=Sem+Imagem'">
+            ${botaoFavorito ? `<div class="evento-favorito-container">${botaoFavorito}</div>` : ''}
         </div>
         <div class="detalhes-info">
             <span class="detalhes-categoria">${evento.categoria}</span>
