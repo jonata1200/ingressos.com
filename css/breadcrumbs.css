@@ -1,0 +1,22 @@
+/* ============================================
+   BREADCRUMBS
+   ============================================ */
+.breadcrumbs {
+    background-color: var(--cor-fundo-claro);
+    padding: var(--espacamento-md) 0;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.breadcrumbs a {
+    color: var(--cor-primaria);
+    transition: var(--transicao);
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumbs span {
+    color: var(--cor-texto-claro);
+    margin: 0 var(--espacamento-xs);
+}

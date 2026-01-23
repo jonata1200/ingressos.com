@@ -1,0 +1,114 @@
+/* ============================================
+   DETALHES DO EVENTO
+   ============================================ */
+.detalhes-evento {
+    padding: var(--espacamento-xl) 0;
+}
+
+.btn-voltar {
+    margin-bottom: var(--espacamento-lg);
+}
+
+.detalhes-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--espacamento-xl);
+    margin-top: var(--espacamento-lg);
+}
+
+.detalhes-imagem {
+    width: 100%;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+}
+
+.detalhes-imagem img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.detalhes-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: var(--espacamento-md);
+    color: var(--cor-texto);
+}
+
+.detalhes-meta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacamento-sm);
+    margin-bottom: var(--espacamento-lg);
+    color: var(--cor-texto-claro);
+}
+
+.detalhes-preco {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin: var(--espacamento-lg) 0;
+}
+
+.detalhes-descricao {
+    margin: var(--espacamento-lg) 0;
+    line-height: 1.8;
+    color: var(--cor-texto);
+}
+
+.detalhes-acoes {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacamento-sm);
+    margin-top: var(--espacamento-lg);
+}
+
+.detalhes-acoes label {
+    font-weight: 600;
+    color: var(--cor-texto);
+}
+
+.detalhes-acoes input[type="number"] {
+    padding: var(--espacamento-sm);
+    border: 2px solid var(--cor-borda);
+    border-radius: var(--border-radius);
+    font-size: var(--tamanho-fonte-base);
+    max-width: 150px;
+}
+
+.detalhes-acoes input[type="number"]:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.detalhes-acoes input[type="number"]:disabled {
+    background-color: var(--cor-fundo-claro);
+    cursor: not-allowed;
+}
+
+.detalhes-acoes .btn:disabled {
+    background-color: var(--cor-texto-claro);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.detalhes-loading {
+    text-align: center;
+    padding: var(--espacamento-xl);
+    color: var(--cor-texto-claro);
+}
+
+.detalhes-categoria {
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: var(--espacamento-xs) var(--espacamento-md);
+    border-radius: var(--border-radius);
+    font-size: var(--tamanho-fonte-pequeno);
+    font-weight: 600;
+    margin-bottom: var(--espacamento-md);
+}
+
+.detalhes-acoes-compartilhar {
+    margin-bottom: var(--espacamento-md);
+}

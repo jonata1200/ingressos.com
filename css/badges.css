@@ -1,0 +1,57 @@
+/* ============================================
+   BADGES E INDICADORES
+   ============================================ */
+.evento-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: var(--espacamento-xs) var(--espacamento-sm);
+    border-radius: var(--border-radius);
+    font-size: var(--tamanho-fonte-pequeno);
+    font-weight: 600;
+    z-index: 1;
+}
+
+.badge-esgotado {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--cor-erro);
+    color: white;
+    padding: var(--espacamento-xs) var(--espacamento-sm);
+    border-radius: var(--border-radius);
+    font-size: var(--tamanho-fonte-pequeno);
+    font-weight: 600;
+    z-index: 1;
+}
+
+.badge-poucos {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #f59e0b;
+    color: white;
+    padding: var(--espacamento-xs) var(--espacamento-sm);
+    border-radius: var(--border-radius);
+    font-size: var(--tamanho-fonte-pequeno);
+    font-weight: 600;
+    z-index: 1;
+}
+
+.alerta-esgotado,
+.alerta-poucos {
+    background-color: #fee2e2;
+    color: #991b1b;
+    padding: var(--espacamento-sm);
+    border-radius: var(--border-radius);
+    margin: var(--espacamento-md) 0;
+    border-left: 4px solid var(--cor-erro);
+}
+
+.alerta-poucos {
+    background-color: #fef3c7;
+    color: #92400e;
+    border-left-color: #f59e0b;
+}

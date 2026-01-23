@@ -1,0 +1,55 @@
+/* ============================================
+   MODO ESCURO
+   ============================================ */
+.toggle-tema {
+    background: none;
+    border: 2px solid var(--cor-borda);
+    border-radius: var(--border-radius);
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transicao);
+    padding: 0;
+}
+
+.toggle-tema:hover {
+    border-color: var(--cor-primaria);
+    background-color: var(--cor-fundo-claro);
+}
+
+/* Variáveis para modo escuro */
+[data-tema="escuro"] {
+    --cor-fundo: #1a1a1a;
+    --cor-fundo-claro: #2a2a2a;
+    --cor-texto: #e5e5e5;
+    --cor-texto-claro: #b0b0b0;
+    --cor-borda: #3a3a3a;
+}
+
+[data-tema="escuro"] .header {
+    background-color: #2a2a2a;
+    border-bottom-color: #3a3a3a;
+}
+
+[data-tema="escuro"] .evento-card {
+    background-color: #2a2a2a;
+}
+
+[data-tema="escuro"] .footer {
+    background-color: #1a1a1a;
+}
+
+[data-tema="escuro"] .skeleton-card {
+    background-color: #2a2a2a;
+}
+
+[data-tema="escuro"] .skeleton-image,
+[data-tema="escuro"] .skeleton-line,
+[data-tema="escuro"] .skeleton-button {
+    background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+    background-size: 200% 100%;
+}

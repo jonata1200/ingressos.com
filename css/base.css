@@ -1,0 +1,40 @@
+/* ============================================
+   BODY E TIPOGRAFIA BASE
+   ============================================ */
+body {
+    font-family: var(--fonte-principal);
+    font-size: var(--tamanho-fonte-base);
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: var(--espacamento-sm);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: var(--espacamento-sm);
+}
+
+/* ============================================
+   SCROLL SUAVE
+   ============================================ */
+html {
+    scroll-behavior: smooth;
+}

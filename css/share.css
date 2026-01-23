@@ -1,0 +1,50 @@
+/* ============================================
+   COMPARTILHAR
+   ============================================ */
+.btn-compartilhar {
+    background-color: var(--cor-fundo-claro);
+    border: 2px solid var(--cor-primaria);
+    color: var(--cor-primaria);
+    padding: var(--espacamento-sm) var(--espacamento-md);
+    border-radius: var(--border-radius);
+    font-size: var(--tamanho-fonte-base);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transicao);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--espacamento-xs);
+}
+
+.btn-compartilhar:hover {
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+.mensagem-feedback {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: var(--espacamento-md) var(--espacamento-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--sombra);
+    z-index: 10000;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+}
+
+.mensagem-feedback.mostrar {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.mensagem-sucesso {
+    background-color: var(--cor-sucesso);
+    color: white;
+}
+
+.mensagem-erro {
+    background-color: var(--cor-erro);
+    color: white;
+}

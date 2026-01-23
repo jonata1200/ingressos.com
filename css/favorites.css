@@ -1,0 +1,43 @@
+/* ============================================
+   FAVORITOS
+   ============================================ */
+.evento-favorito-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+}
+
+.btn-favorito {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transicao);
+    box-shadow: var(--sombra);
+    padding: 0;
+}
+
+.btn-favorito:hover {
+    transform: scale(1.1);
+    background-color: white;
+}
+
+.btn-favorito.favoritado {
+    animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}

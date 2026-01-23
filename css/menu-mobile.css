@@ -1,0 +1,82 @@
+/* ============================================
+   MENU MOBILE (HAMBURGER)
+   ============================================ */
+.menu-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--espacamento-xs);
+    z-index: 1001;
+}
+
+.menu-hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--cor-texto);
+    border-radius: 2px;
+    transition: var(--transicao);
+}
+
+.menu-hamburger[aria-expanded="true"] span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.menu-hamburger[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-hamburger[aria-expanded="true"] span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-overlay.overlay-ativo {
+    display: block;
+    opacity: 1;
+}
+
+.menu-mobile {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: var(--cor-fundo);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    padding: var(--espacamento-xl) var(--espacamento-lg);
+}
+
+.menu-mobile.menu-aberto {
+    right: 0;
+}
+
+.menu-mobile .nav-list {
+    flex-direction: column;
+    gap: var(--espacamento-md);
+    align-items: flex-start;
+}
+
+.menu-mobile .nav-link {
+    font-size: var(--tamanho-fonte-grande);
+    padding: var(--espacamento-sm) 0;
+    width: 100%;
+}

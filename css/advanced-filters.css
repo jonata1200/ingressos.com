@@ -1,0 +1,36 @@
+/* ============================================
+   FILTROS AVANÇADOS
+   ============================================ */
+.filtros-avancados-container {
+    background-color: var(--cor-fundo-claro);
+    padding: var(--espacamento-lg);
+    border-radius: var(--border-radius-lg);
+    margin-bottom: var(--espacamento-lg);
+}
+
+.filtro-grupo {
+    margin-bottom: var(--espacamento-md);
+}
+
+.filtro-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: var(--espacamento-xs);
+    color: var(--cor-texto);
+}
+
+.filtro-input {
+    width: 100%;
+    padding: var(--espacamento-xs) var(--espacamento-sm);
+    border: 2px solid var(--cor-borda);
+    border-radius: var(--border-radius);
+    font-size: var(--tamanho-fonte-base);
+    font-family: var(--fonte-principal);
+    transition: var(--transicao);
+}
+
+.filtro-input:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}

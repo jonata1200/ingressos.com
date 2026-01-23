@@ -1,0 +1,34 @@
+/* ============================================
+   ORDENAÇÃO
+   ============================================ */
+.ordenacao-container {
+    display: flex;
+    align-items: center;
+    gap: var(--espacamento-sm);
+    margin-bottom: var(--espacamento-md);
+}
+
+.ordenacao-label {
+    font-weight: 500;
+    color: var(--cor-texto);
+    white-space: nowrap;
+}
+
+.ordenacao-select {
+    padding: var(--espacamento-xs) var(--espacamento-sm);
+    border: 2px solid var(--cor-borda);
+    border-radius: var(--border-radius);
+    font-size: var(--tamanho-fonte-base);
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    cursor: pointer;
+    transition: var(--transicao);
+    min-width: 200px;
+}
+
+.ordenacao-select:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}

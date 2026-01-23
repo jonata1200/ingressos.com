@@ -1,0 +1,43 @@
+/* ============================================
+   VARIÁVEIS CSS
+   ============================================ */
+:root {
+    /* Cores */
+    --cor-primaria: #dc2626;
+    --cor-primaria-escura: #b91c1c;
+    --cor-secundaria: #ef4444;
+    --cor-texto: #1f2937;
+    --cor-texto-claro: #6b7280;
+    --cor-fundo: #ffffff;
+    --cor-fundo-claro: #f9fafb;
+    --cor-fundo-escuro: #111827;
+    --cor-borda: #e5e7eb;
+    --cor-sucesso: #10b981;
+    --cor-erro: #ef4444;
+    
+    /* Fontes */
+    --fonte-principal: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --tamanho-fonte-base: 16px;
+    --tamanho-fonte-pequeno: 14px;
+    --tamanho-fonte-grande: 18px;
+    
+    /* Espaçamentos */
+    --espacamento-xs: 0.5rem;
+    --espacamento-sm: 1rem;
+    --espacamento-md: 1.5rem;
+    --espacamento-lg: 2rem;
+    --espacamento-xl: 3rem;
+    --espacamento-xxl: 4rem;
+    
+    /* Breakpoints */
+    --breakpoint-mobile: 768px;
+    --breakpoint-tablet: 1024px;
+    
+    /* Outros */
+    --sombra: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --sombra-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --sombra-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --border-radius: 8px;
+    --border-radius-lg: 12px;
+    --transicao: all 0.3s ease;
+}

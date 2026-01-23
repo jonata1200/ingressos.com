@@ -1,0 +1,31 @@
+/* ============================================
+   MELHORIAS DE ACESSIBILIDADE
+   ============================================ */
+*:focus-visible {
+    outline: 2px solid var(--cor-primaria);
+    outline-offset: 2px;
+}
+
+button:focus,
+a:focus,
+input:focus,
+select:focus {
+    outline: 2px solid var(--cor-primaria);
+    outline-offset: 2px;
+}
+
+/* Skip to content link (opcional) */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--cor-primaria);
+    color: white;
+    padding: var(--espacamento-sm);
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
