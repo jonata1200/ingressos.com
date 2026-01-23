@@ -27,9 +27,9 @@ img {
    ============================================ */
 :root {
     /* Cores */
-    --cor-primaria: #6366f1;
-    --cor-primaria-escura: #4f46e5;
-    --cor-secundaria: #8b5cf6;
+    --cor-primaria: #dc2626;
+    --cor-primaria-escura: #b91c1c;
+    --cor-secundaria: #ef4444;
     --cor-texto: #1f2937;
     --cor-texto-claro: #6b7280;
     --cor-fundo: #ffffff;
@@ -528,7 +528,7 @@ html {
 .busca-input:focus {
     outline: none;
     border-color: var(--cor-primaria);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
 }
 
 .btn-limpar {
@@ -837,7 +837,7 @@ html {
 .carrinho-item-quantidade input:focus {
     outline: none;
     border-color: var(--cor-primaria);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
 }
 
 .carrinho-item-preco-unitario {
@@ -1096,7 +1096,7 @@ html {
 .detalhes-acoes input[type="number"]:focus {
     outline: none;
     border-color: var(--cor-primaria);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
 }
 
 .detalhes-acoes input[type="number"]:disabled {
@@ -1173,7 +1173,7 @@ html {
 .form-group select:focus {
     outline: none;
     border-color: var(--cor-primaria);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
 }
 
 .form-group input.campo-erro,
@@ -1234,7 +1234,7 @@ html {
 
 .pagamento-opcao:has(input[type="radio"]:checked) {
     border-color: var(--cor-primaria);
-    background-color: rgba(99, 102, 241, 0.1);
+    background-color: rgba(220, 38, 38, 0.1);
 }
 
 .pagamento-opcao-content {
@@ -1650,7 +1650,7 @@ html {
 .ordenacao-select:focus {
     outline: none;
     border-color: var(--cor-primaria);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
 }
 
 /* ============================================
@@ -1911,7 +1911,7 @@ select:focus {
 .filtro-input:focus {
     outline: none;
     border-color: var(--cor-primaria);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
 }
 
 

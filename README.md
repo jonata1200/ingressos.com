@@ -35,26 +35,18 @@ ingressos.com/
 │   └── styles.css          # Estilos principais
 │
 ├── js/
-│   ├── eventos.js         # Dados dos eventos
-│   ├── utils.js           # Funções utilitárias
-│   ├── renderizacao.js    # Renderização de componentes
-│   ├── navegacao.js       # Sistema de navegação
-│   ├── busca.js           # Funcionalidade de busca
-│   ├── filtros.js         # Filtros de eventos
-│   ├── carrinho.js        # Lógica do carrinho
-│   ├── checkout.js        # Validação e processamento
-│   ├── favoritos.js       # Sistema de favoritos
-│   ├── ordenacao.js       # Ordenação de eventos
-│   └── mobile-menu.js     # Menu mobile hamburger
-│
-└── docs/
-    ├── README.md          # Documentação das fases
-    ├── FASE_1_Estrutura_Base_Layout.md
-    ├── FASE_2_Funcionalidades_Navegacao.md
-    ├── FASE_3_Sistema_Eventos_Dados.md
-    ├── FASE_4_Carrinho_Compras.md
-    ├── FASE_5_Formulario_Checkout.md
-    └── FASE_6_Melhorias_Polimento.md
+    ├── eventos.js         # Dados dos eventos
+    ├── utils.js           # Funções utilitárias
+    ├── renderizacao.js    # Renderização de componentes
+    ├── navegacao.js       # Sistema de navegação
+    ├── busca.js           # Funcionalidade de busca
+    ├── filtros.js         # Filtros de eventos
+    ├── carrinho.js        # Lógica do carrinho
+    ├── checkout.js        # Validação e processamento
+    ├── favoritos.js       # Sistema de favoritos
+    ├── ordenacao.js       # Ordenação de eventos
+    └── mobile-menu.js     # Menu mobile hamburger
+
 ```
 
 ## 🎯 Funcionalidades
@@ -234,6 +226,15 @@ Cada fase possui documentação detalhada na pasta `docs/`.
 ## 📄 Licença
 
 Este projeto é de uso educacional e livre para fins de aprendizado.
+
+## 👨‍💻 Autor
+
+**Jonata Jesus**  
+Desenvolvedor Front-End
+
+- 💼 [LinkedIn](https://www.linkedin.com/in/jj-shineider/)
+- 🐙 [GitHub](https://github.com/jonata1200)
+- 📧 Email: jonatajesus9@gmail.com
 
 ---
 
