@@ -372,28 +372,6 @@ Para testar todas as funcionalidades do projeto:
 - [ ] PWA (Progressive Web App)
 - [ ] Internacionalização (i18n)
 
-### Melhorias Técnicas
-
-- [ ] Testes automatizados (Jest, Cypress)
-- [ ] Build process (Webpack, Vite)
-- [ ] TypeScript migration
-- [ ] Otimização de imagens (WebP, lazy loading)
-- [ ] Service Workers para cache
-- [ ] SEO melhorado (meta tags, structured data)
-
-## 👨‍💻 Desenvolvimento
-
-Este projeto foi desenvolvido seguindo uma metodologia de desenvolvimento em **6 fases**:
-
-1. **FASE 1**: Estrutura base e layout
-2. **FASE 2**: Funcionalidades de navegação
-3. **FASE 3**: Sistema de eventos e dados
-4. **FASE 4**: Carrinho de compras
-5. **FASE 5**: Formulário de checkout
-6. **FASE 6**: Melhorias e polimento
-
-Cada fase possui documentação detalhada na pasta `docs/` (se disponível).
-
 ### Boas Práticas Implementadas
 
 - ✅ Código limpo e comentado
