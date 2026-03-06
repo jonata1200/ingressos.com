@@ -83,7 +83,7 @@ function criarCardEvento(evento) {
     
     card.innerHTML = `
         <div class="evento-imagem">
-            <img src="${evento.imagem}" alt="${evento.nome}" onerror="this.src='https://via.placeholder.com/400x250/e5e7eb/6b7280?text=Sem+Imagem'">
+            <img src="${evento.imagem || 'https://via.placeholder.com/400x250/e5e7eb/6b7280?text=Sem+Imagem'}" alt="${evento.nome}" loading="lazy" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x250/e5e7eb/6b7280?text=Sem+Imagem';">
             ${badgeCategoria}
             ${indicadorIngressos}
             ${botaoFavorito ? `<div class="evento-favorito-container">${botaoFavorito}</div>` : ''}
@@ -134,7 +134,7 @@ function renderizarDetalhesEvento(evento, containerId = 'detalhes-content') {
     
     container.innerHTML = `
         <div class="detalhes-imagem">
-            <img src="${evento.imagem}" alt="${evento.nome}" onerror="this.src='https://via.placeholder.com/600x400/e5e7eb/6b7280?text=Sem+Imagem'">
+            <img src="${evento.imagem || 'https://via.placeholder.com/600x400/e5e7eb/6b7280?text=Sem+Imagem'}" alt="${evento.nome}" loading="lazy" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400/e5e7eb/6b7280?text=Sem+Imagem';">
             ${botaoFavorito ? `<div class="evento-favorito-container">${botaoFavorito}</div>` : ''}
         </div>
         <div class="detalhes-info">
